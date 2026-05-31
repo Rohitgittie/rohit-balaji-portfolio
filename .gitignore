@@ -1,0 +1,14 @@
+# Local-only source files (kept on disk, not in the public repo)
+_design_bundle/
+Rohit heero image.jpeg
+Rphit.pdf
+rohit-portfolio-prompt.md
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependencies (in case anything ever gets added)
+node_modules/
