@@ -4,6 +4,14 @@ Single-page editorial portfolio for [Rohit Balaji](https://linkedin.com/in/rohit
 
 Designed in [Stitch](https://stitch.withgoogle.com/) around Apple's Liquid Glass design language. Built as a single self-contained HTML file — inline CSS, inline vanilla JS, Google Fonts via CDN. No build step, no dependencies.
 
+## Quick start with Claude Code
+
+> **New here?** Paste the line below into a fresh Claude Code session — your session will fork this repo to your GitHub, clone it locally, deploy it to Vercel, and then make customizations alongside you. You'll need the **GitHub** and **Vercel** connectors enabled.
+>
+> ```
+> Fetch https://github.com/theodoreheroldrajan-sketch/rohit-balaji-portfolio, read CLAUDE.md, and follow the Bootstrap.
+> ```
+
 ## View it
 
 Open `index.html` in any modern browser. Or, for proper local-host behaviour:
