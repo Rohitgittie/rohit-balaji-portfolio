@@ -387,8 +387,11 @@ section { position: relative; }
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.30) 100%),
-    url("assets/hero-bg.jpeg") center / cover no-repeat;
+    linear-gradient(135deg,
+      rgba(14, 22, 20, 0.97) 0%,
+      rgba(12, 18, 26, 0.97) 45%,
+      rgba(20, 14, 12, 0.97) 100%
+    );
 }
 
 /* Stained-glass decoration */
@@ -406,7 +409,7 @@ section { position: relative; }
   border: 1px solid rgba(255,255,255,0.14);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  opacity: 0.78;
+  opacity: 0.92;
   pointer-events: none;
   z-index: 0;
   border-radius: 4px;
