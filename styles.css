@@ -331,13 +331,13 @@ section { position: relative; }
 .btn .arrow { transition: transform 200ms cubic-bezier(.2,0,0,1); }
 .btn:hover .arrow { transform: translateX(3px); }
 
-/* Buttons inside hero (dark background) */
-.hero .btn { color: #fff; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.24); }
-.hero .btn:hover { background: rgba(255,255,255,0.20); }
+/* Buttons inside hero — now on page background, use standard glass */
+.hero .btn { color: var(--text); background: var(--surface); border-color: var(--line); }
+.hero .btn:hover { background: var(--surface); filter: brightness(0.97); }
 
 .btn--amber { color: #1c130a; background: var(--accent-amber); border-color: transparent; }
 .btn--amber:hover { filter: brightness(1.08); }
-.hero .btn--amber { color: #1c130a; background: rgba(201,130,43,0.92); border-color: rgba(255,255,255,0.20); }
+.hero .btn--amber { color: #1c130a; background: var(--accent-amber); border-color: transparent; }
 
 .btn--accent { color: #fff; background: var(--accent); border-color: transparent; }
 .btn--accent:hover { filter: brightness(1.10); }
@@ -386,34 +386,11 @@ section { position: relative; }
   padding-top: 96px;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(135deg,
-      rgba(14, 22, 20, 0.97) 0%,
-      rgba(12, 18, 26, 0.97) 45%,
-      rgba(20, 14, 12, 0.97) 100%
-    );
+  background: var(--bg);
 }
 
-/* Stained-glass decoration */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: auto 4vw 8vh auto;
-  width: min(42vw, 520px);
-  height: min(58vh, 620px);
-  background:
-    linear-gradient(135deg, rgba(47, 93, 80, 0.34)  0 25%, transparent 25%),
-    linear-gradient(45deg,  rgba(201,130, 43, 0.28)  0 32%, transparent 32%),
-    linear-gradient(160deg, rgba(49, 92, 114, 0.30)  0 38%, transparent 38%),
-    linear-gradient(25deg,  rgba(140, 58,  50, 0.22)  0 24%, transparent 24%);
-  border: 1px solid rgba(255,255,255,0.14);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  opacity: 0.92;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 4px;
-}
+/* Right-side graphic removed */
+.hero::before { content: none; }
 
 .hero-inner {
   position: relative; z-index: 1;
@@ -430,8 +407,8 @@ section { position: relative; }
 }
 
 .hero-meta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 26px; }
-.hero-meta .dotsep { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.35); display: inline-block; }
-.hero-locale { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.65); font-size: 13px; letter-spacing: 0.02em; }
+.hero-meta .dotsep { width: 4px; height: 4px; border-radius: 50%; background: var(--line); display: inline-block; }
+.hero-locale { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; letter-spacing: 0.02em; }
 .hero-locale .pulse {
   width: 8px; height: 8px; border-radius: 50%;
   background: rgba(212,165,116,0.92);
@@ -444,12 +421,12 @@ section { position: relative; }
   100% { box-shadow: 0 0 0 0   rgba(212,165,116,0);   }
 }
 
-.hero-name { color: #fff !important; margin-bottom: 20px; }
+.hero-name { color: var(--text); margin-bottom: 20px; }
 .hero-role {
   font-family: 'Fraunces', serif;
   font-weight: 400; font-style: italic;
   font-size: clamp(19px, 2.1vw, 26px);
-  color: rgba(255,255,255,0.90) !important;
+  color: var(--muted);
   letter-spacing: -0.008em; line-height: 1.28;
   margin-bottom: 10px;
 }
@@ -457,14 +434,13 @@ section { position: relative; }
   font-family: 'Fraunces', serif;
   font-weight: 300;
   font-size: clamp(16px, 1.55vw, 20px);
-  color: rgba(255,255,255,0.80) !important;
+  color: var(--muted);
   line-height: 1.58;
   max-width: 60ch;
   margin-bottom: 34px;
 }
 .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-.hero .eyebrow { color: rgba(255,255,255,0.60); }
-.hero .eyebrow .dot { color: rgba(212,165,116,0.90); }
+.hero .eyebrow .dot { color: var(--accent-amber); }
 
 @media (max-width: 740px) {
   .hero { padding-top: 80px; }
