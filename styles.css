@@ -380,30 +380,44 @@ section { position: relative; }
    HERO (photo background, always dark text)
    =================================================== */
 .hero {
-  min-height: 100vh;
-  display: grid;
-  align-items: center;
-  padding-top: 96px;
-  position: relative;
-  overflow: hidden;
   background: var(--bg);
+  padding-block: clamp(7rem, 12vw, 10rem) clamp(4rem, 8vw, 7rem);
 }
 
 /* Right-side graphic removed */
 .hero::before { content: none; }
 
 .hero-inner {
-  position: relative; z-index: 1;
   display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
 }
 
-.hero-card {
-  width: min(820px, 100%);
-  padding: 52px 52px 44px;
-  margin-left: clamp(0px, 6vw, 100px);
-  border-radius: 28px;
+.hero-copy {
+  text-align: left;
+}
+
+.hero-image-wrap {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(17, 17, 17, 0.16);
+}
+
+[data-theme="dark"] .hero-image-wrap {
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.40);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: clamp(360px, 48vw, 560px);
+  object-fit: cover;
+  object-position: 56% center;
+  filter: grayscale(100%);
 }
 
 .hero-meta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 26px; }
@@ -442,10 +456,11 @@ section { position: relative; }
 .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .hero .eyebrow .dot { color: var(--accent-amber); }
 
-@media (max-width: 740px) {
-  .hero { padding-top: 80px; }
-  .hero::before { opacity: 0.35; right: -35vw; width: 80vw; }
-  .hero-card { padding: 32px 24px 28px; margin-left: 0; }
+@media (max-width: 768px) {
+  .hero { padding-block: 5rem 3rem; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-copy { max-width: none; }
+  .hero-image { height: min(78vw, 420px); }
 }
 
 /* ===================================================
