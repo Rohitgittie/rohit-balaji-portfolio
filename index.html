@@ -3,523 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rohit Balaji — Multimedia Journalist</title>
+<title>Rohit Balaji — Content Strategy, Video & Paid Social</title>
+<meta name="description" content="Rohit Balaji — content strategist, short-form video producer and paid social marketer with a journalism background. Belfast-based.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --amber:#d4a574;
-  --amber-soft:#e8c79a;
-  --ink:#ffffff;
-  --ink-2:rgba(255,255,255,0.92);
-  --ink-3:rgba(255,255,255,0.65);
-  --ink-4:rgba(255,255,255,0.42);
-
-  --glass-fill: rgba(255,255,255,0.12);
-  --glass-fill-strong: rgba(255,255,255,0.18);
-  --glass-fill-nav: rgba(255,255,255,0.10);
-
-  --edge-bright: rgba(255,255,255,0.42);
-  --edge-mid:    rgba(255,255,255,0.18);
-  --edge-dim:    rgba(255,255,255,0.08);
-
-  --shadow-near: 0 2px 8px rgba(0,0,0,0.10);
-  --shadow-far:  0 24px 48px rgba(0,0,0,0.18);
-  --shadow-hover-far: 0 36px 72px rgba(0,0,0,0.24);
-}
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-html{scroll-behavior:smooth}
-
-body{
-  font-family:'Inter','Helvetica Neue',system-ui,-apple-system,sans-serif;
-  font-size:17px;
-  line-height:1.65;
-  color:var(--ink-2);
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  min-height:100vh;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.20) 100%),
-    url("assets/hero-bg.jpeg") center / cover no-repeat fixed,
-    #8a8a8a;
-}
-
-body::before{
-  content:"";
-  position:fixed; inset:0;
-  pointer-events:none;
-  background: radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.04), rgba(0,0,0,0) 60%);
-  z-index:0;
-}
-
-.serif{ font-family:'Fraunces','Newsreader',Georgia,serif; font-optical-sizing:auto; }
-h1,h2,h3,h4{ font-family:'Fraunces','Newsreader',Georgia,serif; font-weight:600; color:var(--ink); letter-spacing:-0.012em; margin:0; line-height:1.08; }
-h1{ font-size: clamp(56px, 9vw, 132px); font-weight:700; letter-spacing:-0.025em; line-height:0.95; }
-h2{ font-size: clamp(36px, 5vw, 60px); letter-spacing:-0.015em; line-height:1.05; }
-h3{ font-size: clamp(22px, 2.4vw, 30px); letter-spacing:-0.008em; line-height:1.15; }
-h4{ font-size: 19px; font-weight:600; }
-
-p{ margin:0; color:var(--ink-2); }
-a{ color:var(--ink); text-decoration:none; }
-
-.eyebrow{
-  font-family:'Inter',sans-serif;
-  font-size:11px;
-  letter-spacing:0.22em;
-  text-transform:uppercase;
-  font-weight:500;
-  color:var(--ink-3);
-}
-.eyebrow .dot{ color:var(--amber); }
-
-.lede{
-  font-family:'Fraunces',serif;
-  font-weight:300;
-  font-size: clamp(20px, 2.1vw, 26px);
-  line-height:1.45;
-  color:var(--ink-2);
-  letter-spacing:-0.005em;
-  text-wrap: pretty;
-}
-
-.muted{ color:var(--ink-3); }
-
-/* Liquid glass:
-   - .glass is the container + edge specular + ambient overlay
-   - .glass::before paints the refracted backdrop blur (backdrop-filter + filter:url) — sits behind content
-   - .glass::after paints the edge-lit specular gradient ring — sits above content
-   - Content layer stays inside z-index 1, untouched by the displacement filter
-*/
-.glass{
-  position:relative;
-  border-radius: 22px;
-  box-shadow: var(--shadow-near), var(--shadow-far);
-  isolation:isolate;
-  overflow:hidden;
-  background: var(--glass-fill);
-  transition: transform 300ms cubic-bezier(.2,0,0,1), box-shadow 300ms cubic-bezier(.2,0,0,1), background 300ms cubic-bezier(.2,0,0,1);
-}
-/* Refracted backdrop layer (sits behind content) */
-.glass::before{
-  content:"";
-  position:absolute; inset:-4px; /* slight bleed to hide refraction edge artefacts */
-  background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(248,249,250,0.04) 55%, rgba(255,255,255,0.0) 100%);
-  -webkit-backdrop-filter: blur(24px);
-          backdrop-filter: blur(24px);
-  pointer-events:none;
-  z-index:0;
-}
-.glass.refract::before{ filter: url(#liquid-refract); }
-
-/* Edge-lit specular ring */
-.glass::after{
-  content:"";
-  position:absolute; inset:0;
-  border-radius:inherit;
-  padding:1.5px;
-  background:
-    linear-gradient(135deg,
-      var(--edge-bright) 0%,
-      var(--edge-mid) 35%,
-      var(--edge-dim) 65%,
-      rgba(255,255,255,0.14) 100%);
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events:none;
-  z-index:2;
-}
-.glass > *{ position:relative; z-index:1; }
-
-.glass--solid{ background: var(--glass-fill-strong); }
-
-.lift{ cursor:default; }
-.lift:hover{
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: var(--shadow-near), var(--shadow-hover-far);
-}
-
-/* Cursor highlight rides on a third layer so the refraction stays clean */
-.glass[data-cursor] > .cursor-light{
-  position:absolute; inset:0;
-  pointer-events:none;
-  z-index:0;
-  background: radial-gradient(420px circle at var(--mx, -200px) var(--my, -200px), rgba(255,255,255,0.10), rgba(255,255,255,0) 60%);
-  transition: opacity 200ms cubic-bezier(.2,0,0,1);
-}
-
-.shell{ position:relative; z-index:1; }
-main{ display:flex; flex-direction:column; gap: 140px; padding-bottom: 140px; }
-section{ position:relative; }
-.container{ max-width: 1180px; margin: 0 auto; padding: 0 32px; }
-.container--wide{ max-width: 1320px; }
-
-.nav-wrap{
-  position:fixed; top:14px; left:0; right:0; z-index:50;
-  display:flex; justify-content:center; padding: 0 20px;
-  pointer-events:none;
-}
-.nav{
-  pointer-events:auto;
-  display:flex; align-items:center; gap: 28px;
-  padding: 10px 18px 10px 22px;
-  border-radius: 999px;
-  background: var(--glass-fill-nav);
-  -webkit-backdrop-filter: blur(22px);
-          backdrop-filter: blur(22px);
-}
-.nav .brand{
-  font-family:'Fraunces',serif;
-  font-weight:600;
-  font-size:16px;
-  letter-spacing:-0.005em;
-  color:var(--ink);
-  padding-right: 10px;
-}
-.nav .brand .dot{ color:var(--amber); }
-.nav ul{
-  list-style:none; margin:0; padding:0;
-  display:flex; gap: 4px; align-items:center;
-}
-.nav a{
-  display:inline-block;
-  font-size:13px;
-  letter-spacing:0.02em;
-  color:var(--ink-3);
-  padding: 7px 13px;
-  border-radius: 999px;
-  transition: color 150ms cubic-bezier(.2,0,0,1), background 150ms cubic-bezier(.2,0,0,1);
-}
-.nav a:hover{ color:var(--ink); background: rgba(255,255,255,0.08); }
-
-@media (max-width: 720px){
-  .nav{ gap:14px; padding:8px 8px 8px 16px; }
-  .nav .brand{ font-size:14px; padding-right:4px;}
-  .nav ul{ gap:0; }
-  .nav a{ padding:6px 10px; font-size:12px; }
-  .nav .hide-sm{ display:none; }
-}
-
-.btn{
-  display:inline-flex; align-items:center; gap:10px;
-  font-family:'Inter',sans-serif;
-  font-size:14px; font-weight:500;
-  letter-spacing:0.01em;
-  color:var(--ink);
-  padding: 13px 22px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.12);
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,0.22),
-    0 2px 8px rgba(0,0,0,0.10),
-    0 16px 36px rgba(0,0,0,0.18);
-  transition: transform 200ms cubic-bezier(.2,0,0,1), background 200ms cubic-bezier(.2,0,0,1), box-shadow 200ms cubic-bezier(.2,0,0,1);
-}
-.btn:hover{
-  background: rgba(255,255,255,0.18);
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,0.32),
-    0 4px 12px rgba(0,0,0,0.14),
-    0 22px 44px rgba(0,0,0,0.22);
-}
-.btn .arrow{ transition: transform 200ms cubic-bezier(.2,0,0,1); }
-.btn:hover .arrow{ transform: translateX(3px); }
-
-.btn--amber{ color:#1c130a; background: var(--amber); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35), 0 2px 8px rgba(0,0,0,0.10), 0 16px 36px rgba(0,0,0,0.20); }
-.btn--amber:hover{ background: var(--amber-soft); }
-
-.linklike{
-  color:var(--amber);
-  border-bottom: 1px solid transparent;
-  transition: border-color 150ms cubic-bezier(.2,0,0,1), color 150ms cubic-bezier(.2,0,0,1);
-}
-.linklike:hover{ border-bottom-color: var(--amber); color: var(--amber-soft); }
-
-.hero{
-  min-height: 100vh;
-  display:grid;
-  align-items:center;
-  padding-top: 96px;
-}
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-.hero-card{
-  width: min(820px, 100%);
-  padding: 56px 56px 48px;
-  margin-left: clamp(0px, 8vw, 120px);
-  border-radius: 28px;
-}
-.hero-meta{
-  display:flex; gap: 18px; align-items:center; flex-wrap:wrap;
-  margin-bottom: 28px;
-}
-.hero-meta .dotsep{ width:4px; height:4px; border-radius:50%; background: var(--ink-4); display:inline-block; }
-
-.hero-name{ margin-bottom: 24px; }
-.hero-role{
-  font-family:'Fraunces',serif;
-  font-weight: 400; font-style: italic;
-  font-size: clamp(22px, 2.4vw, 30px);
-  color: var(--ink);
-  letter-spacing:-0.008em;
-  line-height:1.25;
-  margin-bottom: 12px;
-}
-.hero-statement{
-  font-family:'Fraunces',serif;
-  font-weight:300;
-  font-size: clamp(18px, 1.7vw, 22px);
-  color: var(--ink-2);
-  line-height:1.5;
-  max-width: 62ch;
-  margin-bottom: 36px;
-}
-.hero-cta-row{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-.hero-locale{ display:inline-flex; align-items:center; gap:8px; color:var(--ink-3); font-size:13px; letter-spacing:0.02em; }
-.hero-locale .pulse{ width:8px; height:8px; border-radius:50%; background:var(--amber); box-shadow: 0 0 0 0 rgba(212,165,116,0.6); animation: pulse 2.4s cubic-bezier(.2,0,0,1) infinite; }
-@keyframes pulse{
-  0%{ box-shadow: 0 0 0 0 rgba(212,165,116,0.5); }
-  70%{ box-shadow: 0 0 0 10px rgba(212,165,116,0); }
-  100%{ box-shadow: 0 0 0 0 rgba(212,165,116,0); }
-}
-
-@media (max-width: 720px){
-  .hero-card{ padding: 36px 28px; margin-left: 0; }
-  .hero{ padding-top: 80px; }
-}
-
-.s-head{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
-  align-items:end;
-}
-.s-head .lede{ max-width: 52ch; }
-@media (max-width: 860px){
-  .s-head{ grid-template-columns: 1fr; gap: 20px; }
-}
-
-.exp-list{ display:flex; flex-direction:column; gap: 22px; }
-.exp{
-  padding: 32px 36px;
-  border-radius: 22px;
-  display:grid;
-  grid-template-columns: 220px 1fr;
-  gap: 36px;
-}
-.exp.featured{ padding: 40px 44px; }
-.exp .left{ display:flex; flex-direction:column; gap:10px; }
-.exp .when{ font-family:'Inter'; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color: var(--ink-3); }
-.exp .where{
-  font-family:'Inter'; font-size:14px; color: var(--ink-3); letter-spacing:0.01em;
-  display:flex; align-items:center; gap:8px;
-}
-.exp .where .pin{ width:6px; height:6px; border-radius:50%; background:var(--ink-4); display:inline-block; }
-.exp h3{ margin-bottom: 6px; }
-.exp .org{
-  font-family:'Fraunces',serif;
-  font-weight: 400; font-style: italic;
-  font-size: 19px;
-  color: var(--ink-2);
-  margin-bottom: 16px;
-}
-.exp .body p + p{ margin-top: 12px; }
-
-.stories{
-  margin-top: 22px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.16);
-}
-.stories .label{ font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color: var(--ink-3); margin-bottom: 14px; font-weight:500; }
-.stories ul{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
-.stories li{ font-family:'Fraunces',serif; font-size: 18px; color: var(--ink); display:flex; gap:12px; align-items:baseline; line-height:1.3; }
-.stories li .num{ font-family:'Inter'; font-size: 11px; color: var(--amber); letter-spacing:0.12em; min-width:28px; }
-
-.featured-badge{
-  display:inline-flex; align-items:center; gap:8px;
-  font-family:'Inter'; font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
-  color: var(--amber); margin-bottom: 12px;
-}
-.featured-badge .bar{ width:18px; height:1px; background: var(--amber); display:inline-block; }
-
-@media (max-width: 860px){
-  .exp, .exp.featured{ grid-template-columns: 1fr; padding: 28px 24px; gap: 18px; }
-  .stories ul{ grid-template-columns: 1fr; }
-}
-
-.duo{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-.duo .col{
-  padding: 36px 36px 32px;
-  border-radius: 22px;
-  min-height: 100%;
-}
-.col h3{ margin-bottom: 6px; }
-.col .col-sub{ color: var(--ink-3); font-size: 14px; margin-bottom: 28px; }
-
-.skills-grid{
-  display:flex; flex-wrap:wrap; gap: 8px;
-}
-.chip{
-  font-family:'Inter'; font-size: 13px; font-weight:500;
-  color: var(--ink-2);
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
-  padding: 8px 14px;
-  border-radius: 999px;
-  letter-spacing: 0.01em;
-  transition: background 150ms cubic-bezier(.2,0,0,1), color 150ms cubic-bezier(.2,0,0,1);
-}
-.chip:hover{ background: rgba(255,255,255,0.18); color: var(--ink); }
-.chip--accent{ color: var(--amber); border-color: rgba(212,165,116,0.45); background: rgba(212,165,116,0.10); }
-
-.edu-list{ display:flex; flex-direction:column; gap: 24px; }
-.edu{
-  display:grid;
-  grid-template-columns: auto 1fr;
-  gap: 22px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.16);
-}
-.edu:first-child{ border-top: 0; padding-top: 0; }
-.edu .years{ font-family:'Inter'; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color: var(--ink-3); padding-top: 4px; min-width: 100px; }
-.edu h4{ font-family:'Fraunces',serif; font-weight:600; font-size: 21px; color: var(--ink); margin-bottom: 4px; line-height:1.2; }
-.edu .deg{ font-family:'Fraunces',serif; font-style:italic; font-weight:400; font-size:16px; color: var(--ink-2); }
-
-@media (max-width: 860px){
-  .duo{ grid-template-columns: 1fr; }
-  .edu{ grid-template-columns: 1fr; gap: 6px; }
-}
-
-.videos{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-.vcard{
-  border-radius: 20px;
-  overflow:hidden;
-  display:flex; flex-direction:column;
-}
-.vframe{
-  position:relative;
-  aspect-ratio: 16/9;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.06), rgba(0,0,0,0.18));
-  overflow:hidden;
-}
-.vframe::after{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.18) 100%);
-  pointer-events:none;
-}
-.vframe .play{
-  position:absolute; left:50%; top:50%; transform: translate(-50%,-50%);
-  width: 64px; height: 64px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.32);
-  -webkit-backdrop-filter: blur(14px);
-          backdrop-filter: blur(14px);
-  opacity: 0.6;
-  transition: opacity 300ms cubic-bezier(.2,0,0,1), transform 300ms cubic-bezier(.2,0,0,1), background 300ms cubic-bezier(.2,0,0,1);
-}
-.vcard:hover .vframe .play{ opacity: 1; transform: translate(-50%,-50%) scale(1.08); background: rgba(255,255,255,0.22); }
-.vcard:hover .vframe::after{ background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.28) 100%); }
-.vlabel{
-  position:absolute; top:14px; left:14px;
-  font-family:'Inter'; font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
-  padding: 5px 10px; border-radius: 999px;
-  background: rgba(0,0,0,0.30);
-  color: var(--ink);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-}
-.vbody{ padding: 22px 24px 24px; }
-.vbody h4{ font-family:'Fraunces',serif; font-weight:600; font-size:20px; line-height:1.22; margin-bottom:8px; color: var(--ink); }
-.vbody p{ font-size:14px; color: var(--ink-3); line-height:1.55; }
-
-.videos-cta{ margin-top: 40px; display:flex; justify-content:center; }
-
-@media (max-width: 860px){
-  .videos{ grid-template-columns: 1fr; }
-}
-
-.about-contact{
-  display:grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 22px;
-}
-.about{ padding: 44px 44px 40px; border-radius: 22px; }
-.about p{ font-family:'Fraunces',serif; font-weight:300; font-size: 20px; line-height: 1.6; color: var(--ink-2); letter-spacing:-0.003em; }
-.about p + p{ margin-top: 18px; }
-.about-quote{
-  font-family:'Fraunces',serif;
-  font-style: italic;
-  font-size: 15px;
-  color: var(--ink-3);
-  letter-spacing: 0.01em;
-  margin-top: 28px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.16);
-}
-
-.contact{ padding: 36px 36px 32px; border-radius: 22px; display:flex; flex-direction:column; }
-.contact h3{ margin-bottom: 24px; }
-.contact-rows{ display:flex; flex-direction:column; gap: 14px; margin-bottom: 28px; }
-.contact-row{ display:grid; grid-template-columns: 90px 1fr; gap: 16px; align-items:baseline; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12); }
-.contact-row:first-child{ border-top: 0; padding-top: 0; }
-.contact-row .k{ font-family:'Inter'; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color: var(--ink-3); }
-.contact-row .v{ font-family:'Inter'; font-size:15px; color: var(--ink); word-break: break-word; }
-.contact-row .v a{ color: var(--ink); border-bottom: 1px solid transparent; transition: border-color 150ms cubic-bezier(.2,0,0,1); }
-.contact-row .v a:hover{ border-bottom-color: var(--amber); color: var(--amber); }
-.contact .btn{ align-self:flex-start; margin-top: auto; }
-
-@media (max-width: 860px){
-  .about-contact{ grid-template-columns: 1fr; }
-  .about{ padding: 32px 26px; }
-  .contact{ padding: 28px 26px; }
-}
-
-footer.foot{
-  display:flex; justify-content:space-between; align-items:center;
-  padding: 40px 0 0;
-  border-top: 1px solid rgba(255,255,255,0.14);
-  margin-top: 40px;
-  color: var(--ink-3); font-size: 12px; letter-spacing: 0.05em;
-}
-footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; font-size: 13px; }
-
-.reveal{ opacity:0; transform: translateY(14px); transition: opacity 700ms cubic-bezier(.2,0,0,1), transform 700ms cubic-bezier(.2,0,0,1); }
-.reveal.in{ opacity:1; transform: translateY(0); }
-
-@media (max-width: 720px){
-  .glass{ -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); }
-}
-
-@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))){
-  .glass{ background: rgba(40,40,48,0.62); }
-  .nav{ background: rgba(40,40,48,0.65); }
-  .btn{ background: rgba(255,255,255,0.22); }
-  .vframe .play{ background: rgba(40,40,48,0.65); }
-}
-</style>
+<link rel="stylesheet" href="styles.css">
+<script>
+(function(){
+  var s=localStorage.getItem('theme')||
+    (window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  document.documentElement.setAttribute('data-theme',s);
+})();
+</script>
 </head>
 <body>
 
@@ -536,16 +32,21 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
   <nav class="nav" aria-label="Primary">
     <div class="brand">Rohit Balaji<span class="dot">.</span></div>
     <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills" class="hide-sm">Skills</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li class="hide-sm"><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="video.html" class="hide-sm">Video</a></li>
+      <li><a href="skills.html" class="hide-sm">Skills</a></li>
+      <li><a href="about.html" class="hide-sm">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="icon-sun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
   </nav>
 </div>
 
-<section class="hero" id="top" data-screen-label="01 Hero">
+<!-- 01 HERO -->
+<section class="hero" id="top">
   <div class="container hero-inner">
     <div class="glass refract hero-card" data-cursor>
       <div class="hero-meta">
@@ -556,20 +57,23 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
 
       <h1 class="hero-name">Rohit<br>Balaji.</h1>
 
-      <p class="hero-role">Junior Multimedia Journalist · <span style="color:var(--ink-3)">The Irish News</span></p>
+      <p class="hero-role">Content strategy, video and paid social with editorial judgement.</p>
 
       <p class="hero-statement">
-        Reporting Northern Ireland in moving pictures &amp; words — driving video strategy across Reels, TikTok and YouTube while covering the courts, the inquests and the politics that shape the place I now call home.
+        I turn stories into social-first content, campaign ideas and digital assets built around how audiences actually watch, read and respond.
       </p>
 
       <div class="hero-cta-row">
-        <a class="btn btn--amber" href="#videos">
-          <span>See the work</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m5 12 7 7 7-7"></path></svg>
+        <a class="btn btn--amber" href="work.html">
+          <span>View Work</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
-        <a class="btn" href="#contact">
-          <span>Get in touch</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        <a class="btn" href="video.html">
+          <span>Watch Videos</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+        <a class="btn" href="contact.html">
+          <span>Contact</span>
         </a>
       </div>
     </div>
@@ -578,19 +82,90 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
 
 <main>
 
-<section id="work" data-screen-label="02 Work">
+<!-- 02 MARKETING FOCUS -->
+<section id="focus">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">01<span class="dot">·</span> Work Experience</div>
-        <h2>Six years in<br>newsrooms &amp; studios.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">MARKETING FOCUS</div>
+        <h2>Creative built for the platform,<br>not just the brief.</h2>
       </div>
-      <p class="lede">From field-reporting at the Deccan Chronicle in Bangalore to driving daily video at The Irish News in Belfast — a working journalist, video producer and social strategist.</p>
+      <p class="lede">I work across content strategy, short-form video, social growth and paid campaign thinking — shaping ideas into formats that fit the audience, channel and objective.</p>
+    </div>
+
+    <div class="focus-grid">
+      <div class="glass-panel focus-card lift reveal" data-cursor>
+        <span class="focus-label">Paid Social</span>
+        <h4>Campaign structure &amp; testing</h4>
+        <p>Meta ads training, campaign structure, objectives, targeting, creative testing and performance reporting.</p>
+      </div>
+      <div class="glass-panel focus-card lift reveal" data-cursor>
+        <span class="focus-label">Content Strategy</span>
+        <h4>Ideas that fit the channel</h4>
+        <p>Campaign ideas, content calendars, brand voice, social hooks, messaging and creative routes.</p>
+      </div>
+      <div class="glass-panel focus-card lift reveal" data-cursor>
+        <span class="focus-label">Video Creative</span>
+        <h4>Short-form that moves</h4>
+        <p>Short-form edits, explainers, Reels, TikToks, captions, subtitles and visual hooks built for platform behaviour.</p>
+      </div>
+      <div class="glass-panel focus-card lift reveal" data-cursor>
+        <span class="focus-label">Audience Growth</span>
+        <h4>Organic strategy &amp; distribution</h4>
+        <p>Organic growth, social packaging, influencer coordination and performance-aware content planning.</p>
+      </div>
+    </div>
+
+    <!-- Current project: Shopaire -->
+    <div class="glass-panel shopaire-card lift reveal" data-cursor>
+      <div>
+        <span class="sc-badge">Current Project</span>
+        <h4>Shopaire.in paid social</h4>
+        <p>Supporting paid social advertising work for Shopaire.in, with focus on campaign planning, creative direction, Meta ads structure and performance-focused content.</p>
+        <span class="shopaire-status">Active · Ongoing</span>
+      </div>
+    </div>
+
+    <!-- Proof points -->
+    <div class="proof-bar">
+      <div class="glass-panel proof-item reveal">
+        <span class="proof-stat">74K</span>
+        <span class="proof-label">Instagram followers added<br>in six months</span>
+      </div>
+      <div class="glass-panel proof-item reveal">
+        <span class="proof-stat">30+</span>
+        <span class="proof-label">Reported articles filed<br>in one month</span>
+      </div>
+      <div class="glass-panel proof-item reveal">
+        <span class="proof-stat">14</span>
+        <span class="proof-label">Part educational video<br>series produced</span>
+      </div>
+      <div class="glass-panel proof-item reveal">
+        <span class="proof-stat">Meta</span>
+        <span class="proof-label">Ads trained — campaign<br>structure &amp; targeting</span>
+      </div>
+      <div class="glass-panel proof-item reveal">
+        <span class="proof-stat">Now</span>
+        <span class="proof-label">Running paid social<br>for Shopaire.in</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 EXPERIENCE PREVIEW -->
+<section id="work">
+  <div class="container">
+    <div class="s-head reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">EXPERIENCE</div>
+        <h2>Newsroom speed.<br>Social growth.<br>Campaign thinking.</h2>
+      </div>
+      <p class="lede">My experience spans journalism, video production, social media growth, brand content and paid social training. The common thread is knowing how to turn an idea into content that fits the audience and the platform.</p>
     </div>
 
     <div class="exp-list">
 
-      <article class="exp featured glass refract lift reveal" data-cursor>
+      <article class="glass-panel exp featured lift reveal" data-cursor>
         <div class="left">
           <span class="when">Jun 2023 — Present</span>
           <span class="where"><span class="pin"></span>Belfast, NI</span>
@@ -599,9 +174,7 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
           <div class="featured-badge"><span class="bar"></span>Current role</div>
           <h3>Junior Multimedia Journalist</h3>
           <p class="org">The Irish News</p>
-          <p>Drive the publication's video strategy across Instagram Reels, TikTok and YouTube — from ideation and shooting through to editing and publishing on daily deadlines. Run digital desk shifts: curating the homepage, subediting copy, and scheduling social content across Facebook, X, TikTok and Instagram.</p>
-          <p>Write headlines, social captions and Google Showcase summaries daily, compressing complex stories to strict character limits while preserving clarity and SEO value. Produce data visualisations and interactive HTML graphics for investigative features, and create Irish-language explainer videos with full subtitle formatting for a bilingual audience.</p>
-
+          <p>Work across video, social, homepage editing, headlines and explainers for a Northern Ireland newsroom. Shape serious stories for Instagram, TikTok, YouTube and digital readers, balancing clarity, speed and platform behaviour.</p>
           <div class="stories">
             <div class="label">Stories covered</div>
             <ul>
@@ -611,22 +184,11 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
               <li><span class="num">04</span>Casement Park political developments</li>
             </ul>
           </div>
+          <p class="mkt-rel"><strong>Marketing relevance:</strong> Fast creative judgement, audience-aware packaging, headline testing instincts, short-form video and digital distribution.</p>
         </div>
       </article>
 
-      <article class="exp glass refract lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Feb 2023 — Mar 2023</span>
-          <span class="where"><span class="pin"></span>Liverpool, UK</span>
-        </div>
-        <div class="body">
-          <h3>Content Marketing Associate</h3>
-          <p class="org">Da Box</p>
-          <p>Produced digital marketing content and copy for a subscription-box brand's social and web channels — short-form video, landing-page copy and email sequencing aligned to the brand's voice.</p>
-        </div>
-      </article>
-
-      <article class="exp glass refract lift reveal" data-cursor>
+      <article class="glass-panel exp lift reveal" data-cursor>
         <div class="left">
           <span class="when">Sep 2022 — Jan 2023</span>
           <span class="where"><span class="pin"></span>Belfast, NI</span>
@@ -634,214 +196,155 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
         <div class="body">
           <h3>Social Media Manager · Content Producer</h3>
           <p class="org">Shirt in a Box</p>
-          <p>Led an organic social strategy that grew the brand's Instagram following by <strong style="color:var(--amber); font-weight:600">74,000</strong> in six months. Managed a team of 7 video editors across short- and long-form pipelines, and ran an influencer programme whose every campaign passed 100,000 views.</p>
-          <p>Oversaw content calendars across 5+ social accounts; designed 100+ visual content pieces; used Ahrefs for keyword research; managed CMS workflows in WordPress and Notion.</p>
+          <p>Grew a Belfast retailer's Instagram by <strong>74,000 followers</strong> in six months through organic content strategy. Managed editors, planned content across multiple accounts and helped turn products into repeatable social formats.</p>
+          <p class="mkt-rel"><strong>Marketing relevance:</strong> Organic growth, social content systems, product storytelling, influencer campaigns and performance-aware creative.</p>
         </div>
       </article>
 
-      <article class="exp glass refract lift reveal" data-cursor>
+      <article class="glass-panel exp lift reveal" data-cursor>
         <div class="left">
-          <span class="when">May 2022 — Sep 2022</span>
-          <span class="where"><span class="pin"></span>Belfast, NI</span>
+          <span class="when">2026 — Present</span>
+          <span class="where"><span class="pin"></span>Remote</span>
         </div>
         <div class="body">
-          <h3>Social Media Marketing Intern</h3>
-          <p class="org">Shirt in a Box</p>
-          <p>Internship that became the manager role — built out the content pipeline, learned the brand voice, and started the growth experiments that compounded across the following six months.</p>
-        </div>
-      </article>
-
-      <article class="exp glass refract lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Dec 2020 — Jan 2021</span>
-          <span class="where"><span class="pin"></span>Bengaluru, IN</span>
-        </div>
-        <div class="body">
-          <h3>Multimedia Content Producer</h3>
-          <p class="org">YourStory Media</p>
-          <p>Wrote scripts for informative content and edited videos end-to-end for one of India's largest startup-media platforms.</p>
-        </div>
-      </article>
-
-      <article class="exp glass refract lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Oct 2020 — Nov 2020</span>
-          <span class="where"><span class="pin"></span>Orissa, IN</span>
-        </div>
-        <div class="body">
-          <h3>Video Producer · Content Coordinator</h3>
-          <p class="org">Asha Kiran Society</p>
-          <p>Produced a 14-part teaching video series documenting agronomic activities for the Adarsha Baghicha rural-livelihood programme. Handled scripting, shooting, editing, animation and sound design in Premiere Pro, After Effects and Final Draft — built for direct community use in rural Orissa, requiring clear, accessible visual communication for a non-specialist audience.</p>
-        </div>
-      </article>
-
-      <article class="exp glass refract lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Apr 2019 — Oct 2019</span>
-          <span class="where"><span class="pin"></span>Bengaluru, IN</span>
-        </div>
-        <div class="body">
-          <h3>Field Reporter Intern</h3>
-          <p class="org">Deccan Chronicle</p>
-          <p>Reported across multiple news beats at one of South India's major English-language dailies, filing 30+ articles in a single month. Multiple pieces published in print and online; developed speed, accuracy and editorial discipline in a fast-paced newsroom.</p>
+          <div class="featured-badge"><span class="bar"></span>Current project</div>
+          <h3>Paid Social &amp; Creative Strategy</h3>
+          <p class="org">Shopaire.in</p>
+          <p>Currently supporting paid social advertising work for Shopaire.in, focusing on Meta ads structure, creative routes, hooks, captions and campaign-ready content.</p>
+          <p class="mkt-rel"><strong>Marketing relevance:</strong> Paid social setup, creative testing, ecommerce messaging and campaign execution.</p>
         </div>
       </article>
 
     </div>
+
+    <a class="view-more" href="work.html">
+      View full experience
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </a>
   </div>
 </section>
 
-<section id="skills" data-screen-label="03 Skills & Education">
+<!-- 04 VIDEO REEL -->
+<section id="video">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">02<span class="dot">·</span> Skills &amp; Education</div>
-        <h2>The toolkit<br>and the training.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">VIDEO</div>
+        <h2>Creative that moves<br>before you click.</h2>
       </div>
-      <p class="lede">A working journalist's stack — production tools, editorial chops, and the platforms where today's audiences actually live.</p>
+      <p class="lede">A selection of short-form, explainer and campaign-style video work. Hover a card to preview. Each project page holds the full story, stats and context.</p>
     </div>
+  </div>
 
-    <div class="duo">
+  <div class="video-reel" role="list" aria-label="Video projects">
 
-      <div class="glass refract col lift reveal" data-cursor>
-        <h3>Skills</h3>
-        <p class="col-sub">Production, editorial and platform.</p>
-        <div class="skills-grid">
-          <span class="chip chip--accent">Videography</span>
-          <span class="chip chip--accent">After Effects</span>
-          <span class="chip chip--accent">Premiere Pro</span>
-          <span class="chip chip--accent">Final Draft</span>
-          <span class="chip">Instagram strategy</span>
-          <span class="chip">TikTok strategy</span>
-          <span class="chip">YouTube</span>
-          <span class="chip">Copywriting</span>
-          <span class="chip">Subediting</span>
-          <span class="chip">Headline writing</span>
-          <span class="chip">WordPress</span>
-          <span class="chip">Notion</span>
-          <span class="chip">Ahrefs</span>
-          <span class="chip">Data visualisation</span>
-          <span class="chip">Interactive HTML</span>
-          <span class="chip">Irish-language subtitling</span>
+    <a class="video-card" href="video.html" role="listitem">
+      <div class="vframe">
+        <!-- VIDEO SOURCE: add src="path/to/preview.mp4" poster="path/to/thumb.jpg" to the video element below -->
+        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-noah.jpg"></video> -->
+        <span class="vlabel">News Explainer · Instagram</span>
+        <div class="play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
         </div>
       </div>
-
-      <div class="glass refract col lift reveal" data-cursor>
-        <h3>Education</h3>
-        <p class="col-sub">Belfast, then back to Bangalore.</p>
-        <div class="edu-list">
-          <div class="edu">
-            <div class="years">2021 — 2022</div>
-            <div>
-              <h4>Queen's University Belfast</h4>
-              <p class="deg">MA, Media and Broadcast Production</p>
-            </div>
-          </div>
-          <div class="edu">
-            <div class="years">2018 — 2021</div>
-            <div>
-              <h4>Christ University, Bangalore</h4>
-              <p class="deg">BA, Journalism</p>
-            </div>
-          </div>
-          <div class="edu">
-            <div class="years">2012 — 2018</div>
-            <div>
-              <h4>PSBB LLA</h4>
-              <p class="deg">Secondary &amp; Higher Secondary</p>
-            </div>
-          </div>
+      <div class="vbody">
+        <h4>Noah Donohoe explainer</h4>
+        <p>Short-form explainer built to make a complex story clear for social audiences.</p>
+        <div class="vbadges">
+          <span class="video-stat-badge">Instagram / TikTok</span>
+          <span class="video-stat-badge">Script + edit</span>
+          <span class="video-stat-badge">Views to be added</span>
         </div>
       </div>
+    </a>
 
-    </div>
+    <a class="video-card" href="video.html" role="listitem">
+      <div class="vframe">
+        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-casement.jpg"></video> -->
+        <span class="vlabel">News Reel · Instagram</span>
+        <div class="play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </div>
+      </div>
+      <div class="vbody">
+        <h4>Casement Park, explained</h4>
+        <p>The political story behind the stadium debate, packaged for a social-first audience.</p>
+        <div class="vbadges">
+          <span class="video-stat-badge">Instagram Reel</span>
+          <span class="video-stat-badge">Edit + captions</span>
+          <span class="video-stat-badge">Views to be added</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="video-card" href="video.html" role="listitem">
+      <div class="vframe">
+        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-irish.jpg"></video> -->
+        <span class="vlabel">Explainer · YouTube</span>
+        <div class="play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </div>
+      </div>
+      <div class="vbody">
+        <h4>Irish-language explainer</h4>
+        <p>Bilingual explainer with full subtitle formatting for a dual-language audience.</p>
+        <div class="vbadges">
+          <span class="video-stat-badge">YouTube</span>
+          <span class="video-stat-badge">Script + subtitles</span>
+          <span class="video-stat-badge">Views to be added</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="video-card" href="video.html" role="listitem">
+      <div class="vframe">
+        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-yourstory.jpg"></video> -->
+        <span class="vlabel">Brand · YouTube</span>
+        <div class="play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </div>
+      </div>
+      <div class="vbody">
+        <h4>YourStory startup explainer</h4>
+        <p>Founder and technology story turned into accessible digital content for one of India's major media platforms.</p>
+        <div class="vbadges">
+          <span class="video-stat-badge">YouTube</span>
+          <span class="video-stat-badge">Script + edit</span>
+          <span class="video-stat-badge">Views to be added</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="container" style="margin-top:8px">
+    <a class="view-more reveal" href="video.html">
+      View video work
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </a>
   </div>
 </section>
 
-<section id="videos" data-screen-label="04 Videos">
-  <div class="container container--wide">
-    <div class="s-head reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px">03<span class="dot">·</span> Video Projects</div>
-        <h2>Selected video<br>work.</h2>
-      </div>
-      <p class="lede">Three pieces from the past year — newsroom video, explainer work, and a feature edit. [Rohit to swap in final embeds.]</p>
-    </div>
-
-    <div class="videos">
-
-      <article class="vcard glass refract lift reveal" data-cursor>
-        <div class="vframe">
-          <!-- VIDEO 1 URL -->
-          <span class="vlabel">News · Reel</span>
-          <div class="play">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
-          </div>
-        </div>
-        <div class="vbody">
-          <h4>[Video title — e.g. Casement Park, explained.]</h4>
-          <p>[One-line description of the piece, the platform, and the angle.]</p>
-        </div>
-      </article>
-
-      <article class="vcard glass refract lift reveal" data-cursor>
-        <div class="vframe">
-          <!-- VIDEO 2 URL -->
-          <span class="vlabel">Explainer · YouTube</span>
-          <div class="play">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
-          </div>
-        </div>
-        <div class="vbody">
-          <h4>[Video title — e.g. Irish-language explainer.]</h4>
-          <p>[One-line description — bilingual subtitle work, audience, runtime.]</p>
-        </div>
-      </article>
-
-      <article class="vcard glass refract lift reveal" data-cursor>
-        <div class="vframe">
-          <!-- VIDEO 3 URL -->
-          <span class="vlabel">Feature · TikTok</span>
-          <div class="play">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
-          </div>
-        </div>
-        <div class="vbody">
-          <h4>[Video title — e.g. Belfast streetscape feature.]</h4>
-          <p>[One-line description — the brief, the cut, where it landed.]</p>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="videos-cta reveal">
-      <a class="btn btn--amber" href="/projects">
-        <span>View all video projects</span>
-        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<section id="about" data-screen-label="05 About & Contact">
+<!-- 05 ABOUT + CONTACT -->
+<section id="about">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">04<span class="dot">·</span> About &amp; Contact</div>
+        <div class="eyebrow" style="margin-bottom:14px">ABOUT &amp; CONTACT</div>
         <h2>About, and<br>how to reach me.</h2>
       </div>
-      <p class="lede">A short note, the contact details, and an open door.</p>
+      <p class="lede">A short note on where I come from and where I am heading — plus the contact details if you want to work together.</p>
     </div>
 
     <div class="about-contact">
-      <div class="glass refract about lift reveal" data-cursor>
-        <p>I'm a multimedia journalist from Bangalore, four-plus years into making Belfast home. By day I'm at <span class="linklike">The Irish News</span>, where I lead video for Reels, TikTok and YouTube and run digital-desk shifts — writing headlines, subediting copy, building the occasional interactive graphic, and reporting some of Northern Ireland's heaviest ongoing stories.</p>
-        <p>Before journalism I built audiences: I grew a small Belfast retailer's Instagram by seventy-four thousand followers in half a year, and earlier still I produced a fourteen-part agronomy teaching series for villages in rural Odisha. Different rooms, same job — finding the story, framing it well, and getting it in front of the right people.</p>
-        <p class="about-quote">— Available for freelance video, editorial and social-strategy work alongside my full-time role.</p>
+      <div class="glass-panel about lift reveal" data-cursor>
+        <p>I started in journalism and video because I liked finding the story. Over time, the work kept moving closer to marketing: social growth, brand content, platform strategy, audience behaviour and paid campaign thinking.</p>
+        <p>By day I am at The Irish News in Belfast, leading video for Reels, TikTok and YouTube and running digital-desk shifts. Outside that, I am building marketing skills — Meta ads training, current paid social work for Shopaire.in, and a growing understanding of how distribution shapes creative decisions.</p>
+        <p>That is the direction I am building now: marketing work with the clarity of journalism and the distribution awareness of social media.</p>
+        <p class="about-quote">— Open to marketing, content strategy, paid social and video-led projects alongside my full-time role.</p>
       </div>
 
-      <div class="glass refract contact lift reveal" id="contact" data-cursor>
+      <div class="glass-panel contact-card lift reveal" id="contact" data-cursor>
         <h3>Contact</h3>
         <div class="contact-rows">
           <div class="contact-row"><span class="k">Email</span><span class="v"><a href="mailto:rohit.baljee@gmail.com">rohit.baljee@gmail.com</a></span></div>
@@ -851,61 +354,90 @@ footer.foot .photo-credit{ font-style: italic; font-family:'Fraunces',serif; fon
         </div>
         <a class="btn btn--amber" href="mailto:rohit.baljee@gmail.com?subject=Let%E2%80%99s%20work%20together">
           <span>Email me</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
       </div>
     </div>
 
     <footer class="foot">
-      <div>© 2026 Rohit Balaji · Built in Belfast</div>
+      <div>© 2026 Rohit Balaji · Belfast</div>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="work.html">Work</a>
+        <a href="video.html">Video</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <div class="photo-credit">Photograph: A rower on the Lagan</div>
     </footer>
   </div>
 </section>
 
 </main>
-
 </div>
 
 <script>
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting){
-      const delay = (parseInt(e.target.dataset.stagger || 0, 10) || 0);
-      setTimeout(() => e.target.classList.add('in'), delay);
+/* ---- Theme toggle ---- */
+function toggleTheme(){
+  var cur = document.documentElement.getAttribute('data-theme');
+  var next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+
+/* ---- Scroll reveal ---- */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var delay = parseInt(e.target.dataset.stagger || 0, 10) || 0;
+      setTimeout(function(){ e.target.classList.add('in'); }, delay);
       io.unobserve(e.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal').forEach((el) => {
-  const parent = el.parentElement;
-  if (parent){
-    const siblings = [...parent.querySelectorAll(':scope > .reveal')];
-    const idx = siblings.indexOf(el);
-    if (idx >= 0) el.dataset.stagger = String(idx * 70);
+document.querySelectorAll('.reveal').forEach(function(el){
+  var parent = el.parentElement;
+  if(parent){
+    var siblings = Array.from(parent.querySelectorAll(':scope > .reveal'));
+    var idx = siblings.indexOf(el);
+    if(idx >= 0) el.dataset.stagger = String(idx * 65);
   }
   io.observe(el);
 });
 
-const supportsHover = window.matchMedia('(hover: hover)').matches;
-if (supportsHover){
-  document.querySelectorAll('[data-cursor]').forEach(el => {
-    // Inject cursor-light layer (a sibling of content, in front of refracted backdrop)
-    const light = document.createElement('div');
+/* ---- Cursor light ---- */
+var supportsHover = window.matchMedia('(hover: hover)').matches;
+if(supportsHover){
+  document.querySelectorAll('[data-cursor]').forEach(function(el){
+    var light = document.createElement('div');
     light.className = 'cursor-light';
     el.insertBefore(light, el.firstChild);
-    el.addEventListener('pointermove', (e) => {
-      const r = el.getBoundingClientRect();
+    el.addEventListener('pointermove', function(e){
+      var r = el.getBoundingClientRect();
       el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
       el.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
-    el.addEventListener('pointerleave', () => {
+    el.addEventListener('pointerleave', function(){
       el.style.setProperty('--mx', '-200px');
       el.style.setProperty('--my', '-200px');
     });
   });
 }
+
+/* ---- Video hover-to-play ---- */
+document.querySelectorAll('.video-card').forEach(function(card){
+  var video = card.querySelector('video');
+  if(!video) return;
+  card.addEventListener('mouseenter', function(){
+    video.muted = true;
+    video.play().catch(function(){});
+  });
+  card.addEventListener('mouseleave', function(){
+    video.pause();
+    video.currentTime = 0;
+  });
+});
 </script>
 
 </body>
