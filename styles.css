@@ -398,8 +398,50 @@ section { position: relative; }
   text-align: left;
 }
 
+.hero-copy-panel {
+  position: relative;
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  border-radius: 1.5rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg,
+      rgba(47,  93,  80,  0.18),
+      rgba(201, 130, 43,  0.10),
+      rgba(49,  92,  114, 0.14),
+      rgba(140, 58,  50,  0.08)
+    ),
+    var(--surface);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  box-shadow: 0 18px 50px rgba(17, 17, 17, 0.08);
+}
+[data-theme="dark"] .hero-copy-panel {
+  background:
+    linear-gradient(135deg,
+      rgba(123, 174, 156, 0.18),
+      rgba(227, 166, 74,  0.10),
+      rgba(120, 168, 189, 0.14),
+      rgba(196, 111, 101, 0.08)
+    ),
+    var(--surface);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+}
+.hero-copy-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  border-radius: 1.5rem 0 0 1.5rem;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-amber), var(--accent-blue));
+  opacity: 0.75;
+  pointer-events: none;
+}
+
 .hero-image-wrap {
   position: relative;
+  width: min(100%, 380px);
+  max-width: 380px;
+  justify-self: end;
   border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -414,7 +456,7 @@ section { position: relative; }
 .hero-image {
   display: block;
   width: 100%;
-  height: clamp(360px, 48vw, 560px);
+  height: clamp(320px, 38vw, 480px);
   object-fit: cover;
   object-position: 56% center;
   filter: grayscale(100%);
@@ -456,10 +498,11 @@ section { position: relative; }
 .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .hero .eyebrow .dot { color: var(--accent-amber); }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .hero { padding-block: 5rem 3rem; }
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero-copy { max-width: none; }
+  .hero-image-wrap { justify-self: start; width: min(100%, 420px); max-width: 420px; }
   .hero-image { height: min(78vw, 420px); }
 }
 
