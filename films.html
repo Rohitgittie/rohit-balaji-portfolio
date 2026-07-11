@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Films — Rohit Balaji</title>
+<meta name="description" content="Short-form, explainer and campaign-style video work by Rohit Balaji.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+(function(){
+  var s=localStorage.getItem('theme')||
+    (window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  document.documentElement.setAttribute('data-theme',s);
+})();
+</script>
+</head>
+<body>
+
+<div class="shell">
+
+<div class="nav-wrap">
+  <nav class="nav" aria-label="Primary">
+    <div class="brand"><a href="index.html" style="color:inherit">Rohit Balaji<span class="dot">.</span></a></div>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="growth.html" class="hide-sm">Growth</a></li>
+      <li><a href="films.html" class="active hide-sm">Films</a></li>
+      <li><a href="about.html" class="hide-sm">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="icon-sun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+    <a class="nav-cv" href="assets/rohit-balaji-cv.pdf" download>Download CV</a>
+  </nav>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal">FILMS</div>
+    <h1 class="reveal">Campaign thinking<br>with a video editor's eye.</h1>
+    <p class="lede reveal" style="margin-top:18px">A selection of short-form, explainer and social-first work. Each piece shows the hook, platform, role and results where available. Add video sources and embed links to activate hover previews.</p>
+  </div>
+</section>
+
+<main style="padding-top:0">
+
+<!-- Cinematic reel -->
+<section>
+  <div class="container">
+    <div class="eyebrow reveal" style="margin-bottom:12px">THE REEL</div>
+    <h2 class="reveal" style="margin-bottom:8px">Selected pieces</h2>
+  </div>
+
+  <div class="cine-wrap">
+    <div class="cine-reel" id="cineReel" role="list" aria-label="Film reel">
+
+      <a class="cine-frame" href="#noah" role="listitem">
+        <!-- Instagram Reel embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">Instagram Reel</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Noah Donohoe explainer</div>
+          <div class="cine-sub">The Irish News · Script + edit</div>
+        </div>
+      </a>
+
+      <a class="cine-frame" href="#casement" role="listitem">
+        <!-- Instagram Reel embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">Instagram Reel</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Casement Park, explained</div>
+          <div class="cine-sub">The Irish News · Edit + captions</div>
+        </div>
+      </a>
+
+      <a class="cine-frame" href="#shirtinabox" role="listitem">
+        <!-- TikTok embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">TikTok</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Kit-culture format</div>
+          <div class="cine-sub">Shirt in a Box · Creative direction</div>
+        </div>
+      </a>
+
+      <a class="cine-frame" href="#irish" role="listitem">
+        <!-- video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">YouTube</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Irish-language explainer</div>
+          <div class="cine-sub">The Irish News · Script + subtitles</div>
+        </div>
+      </a>
+
+      <a class="cine-frame" href="#yourstory" role="listitem">
+        <!-- video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">YouTube</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">YourStory startup explainer</div>
+          <div class="cine-sub">YourStory Media · Script + edit</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Detailed cards -->
+<section>
+  <div class="container">
+    <h2 class="reveal" style="margin-bottom:40px">Project detail</h2>
+    <div class="video-detail-grid">
+
+      <article class="glass-panel video-detail-card lift reveal" id="noah" data-cursor>
+        <div class="vframe" style="border-radius:0">
+          <!-- Embed: replace the div below with an iframe or video element -->
+          <div style="background:linear-gradient(135deg,rgba(47,93,80,0.28),rgba(49,92,114,0.30));width:100%;height:100%;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Inter';font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Embed to be added</span>
+          </div>
+          <span class="vlabel">News Explainer</span>
+        </div>
+        <div class="vbody">
+          <div class="vd-meta">
+            <span>Instagram / TikTok</span>
+            <span>Script + edit + captions</span>
+          </div>
+          <h4>Noah Donohoe explainer</h4>
+          <p class="vd-desc">Short-form explainer built to make a complex, ongoing inquest story clear for social audiences. Structured around what viewers need to know first, with hard-cut pacing and embedded captions.</p>
+          <div class="vbadges" style="margin-top:12px">
+            <span class="video-stat-badge">Views to be added</span>
+            <span class="video-stat-badge">The Irish News</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-panel video-detail-card lift reveal" id="casement" data-cursor>
+        <div class="vframe" style="border-radius:0">
+          <div style="background:linear-gradient(135deg,rgba(201,130,43,0.22),rgba(47,93,80,0.28));width:100%;height:100%;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Inter';font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Embed to be added</span>
+          </div>
+          <span class="vlabel">News Reel</span>
+        </div>
+        <div class="vbody">
+          <div class="vd-meta">
+            <span>Instagram Reel</span>
+            <span>Edit + captions</span>
+          </div>
+          <h4>Casement Park, explained</h4>
+          <p class="vd-desc">The political story behind the Casement Park stadium debate, packaged for a social-first audience unfamiliar with the planning and political background.</p>
+          <div class="vbadges" style="margin-top:12px">
+            <span class="video-stat-badge">Views to be added</span>
+            <span class="video-stat-badge">The Irish News</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-panel video-detail-card lift reveal" id="irish" data-cursor>
+        <div class="vframe" style="border-radius:0">
+          <div style="background:linear-gradient(135deg,rgba(49,92,114,0.28),rgba(140,58,50,0.22));width:100%;height:100%;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Inter';font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Embed to be added</span>
+          </div>
+          <span class="vlabel">Explainer</span>
+        </div>
+        <div class="vbody">
+          <div class="vd-meta">
+            <span>YouTube</span>
+            <span>Script + bilingual subtitles</span>
+          </div>
+          <h4>Irish-language explainer</h4>
+          <p class="vd-desc">Explainer produced with full Irish-language subtitle formatting for a bilingual audience — required precision in translation, timing and on-screen text design.</p>
+          <div class="vbadges" style="margin-top:12px">
+            <span class="video-stat-badge">Views to be added</span>
+            <span class="video-stat-badge">The Irish News</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-panel video-detail-card lift reveal" id="yourstory" data-cursor>
+        <div class="vframe" style="border-radius:0">
+          <div style="background:linear-gradient(135deg,rgba(47,93,80,0.22),rgba(201,130,43,0.26));width:100%;height:100%;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Inter';font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Embed to be added</span>
+          </div>
+          <span class="vlabel">Brand · YouTube</span>
+        </div>
+        <div class="vbody">
+          <div class="vd-meta">
+            <span>YouTube</span>
+            <span>Script + edit</span>
+            <span>YourStory Media</span>
+          </div>
+          <h4>YourStory startup explainer</h4>
+          <p class="vd-desc">Founder and technology story turned into accessible digital content for one of India's major digital media platforms — scripted and edited end-to-end.</p>
+          <div class="vbadges" style="margin-top:12px">
+            <span class="video-stat-badge">Views to be added</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-panel video-detail-card lift reveal" id="asha" data-cursor>
+        <div class="vframe" style="border-radius:0">
+          <div style="background:linear-gradient(135deg,rgba(140,58,50,0.22),rgba(49,92,114,0.28));width:100%;height:100%;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Inter';font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Embed to be added</span>
+          </div>
+          <span class="vlabel">Education · Series</span>
+        </div>
+        <div class="vbody">
+          <div class="vd-meta">
+            <span>14-part series</span>
+            <span>Full production</span>
+            <span>Asha Kiran Society</span>
+          </div>
+          <h4>Asha Kiran: agronomic video series</h4>
+          <p class="vd-desc">Produced a 14-part teaching video series for the Adarsha Baghicha rural-livelihood programme in Odisha — scripting, filming, editing, animation and sound design for a non-specialist community audience.</p>
+          <div class="vbadges" style="margin-top:12px">
+            <span class="video-stat-badge">14 episodes</span>
+            <span class="video-stat-badge">Premiere Pro + After Effects</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="margin-top:48px; display:flex; gap:14px; flex-wrap:wrap">
+      <a class="btn btn--amber" href="contact.html">
+        <span>Discuss a project</span>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+      <a class="btn" href="work.html">
+        <span>View full experience</span>
+      </a>
+    </div>
+
+    <footer class="foot">
+      <div>© 2026 Rohit Balaji · Belfast</div>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="photo-credit">Photograph: A rower on the Lagan</div>
+    </footer>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+function toggleTheme(){
+  var cur=document.documentElement.getAttribute('data-theme');
+  var next=cur==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  localStorage.setItem('theme',next);
+}
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var d=parseInt(e.target.dataset.stagger||0,10)||0;
+      setTimeout(function(){e.target.classList.add('in');},d);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:0.10,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){
+  var p=el.parentElement;
+  if(p){var s=Array.from(p.querySelectorAll(':scope > .reveal'));var i=s.indexOf(el);if(i>=0)el.dataset.stagger=String(i*65);}
+  io.observe(el);
+});
+var supportsHover=window.matchMedia('(hover: hover)').matches;
+if(supportsHover){document.querySelectorAll('[data-cursor]').forEach(function(el){
+  var l=document.createElement('div');l.className='cursor-light';el.insertBefore(l,el.firstChild);
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px');});
+  el.addEventListener('pointerleave',function(){el.style.setProperty('--mx','-200px');el.style.setProperty('--my','-200px');});
+});}
+document.querySelectorAll('.video-card').forEach(function(card){
+  var video=card.querySelector('video');
+  if(!video)return;
+  card.addEventListener('mouseenter',function(){video.muted=true;video.play().catch(function(){});});
+  card.addEventListener('mouseleave',function(){video.pause();video.currentTime=0;});
+});
+</script>
+
+<script>
+(function(){
+  var nav=document.querySelector(".nav");
+  if(!nav)return;
+  var t=false;
+  function onScroll(){
+    nav.classList.toggle("shrunk",window.scrollY>40);
+    t=false;
+  }
+  window.addEventListener("scroll",function(){
+    if(!t){requestAnimationFrame(onScroll);t=true;}
+  },{passive:true});
+})();
+</script>
+<script>
+(function(){
+  var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reel=document.getElementById('cineReel');
+  if(reel&&!reduceMotion){
+    var advanced=false;
+    var rio=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting&&!advanced){
+          advanced=true;
+          reel.scrollTo({left:90,behavior:'smooth'});
+          rio.unobserve(reel);
+        }
+      });
+    },{threshold:0.35});
+    rio.observe(reel);
+  }
+  if(window.matchMedia('(hover: hover)').matches){
+    document.querySelectorAll('.cine-frame').forEach(function(frame){
+      frame.addEventListener('pointermove',function(e){
+        if(reduceMotion)return;
+        var r=frame.getBoundingClientRect();
+        var rx=((e.clientY-r.top)/r.height-0.5)*-3.5;
+        var ry=((e.clientX-r.left)/r.width-0.5)*4.5;
+        frame.style.transform='scale(1.035) rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg)';
+      });
+      frame.addEventListener('pointerleave',function(){frame.style.transform='';});
+      var video=frame.querySelector('video');
+      if(video){
+        frame.addEventListener('mouseenter',function(){video.muted=true;video.play().catch(function(){});});
+        frame.addEventListener('mouseleave',function(){video.pause();video.currentTime=0;});
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
