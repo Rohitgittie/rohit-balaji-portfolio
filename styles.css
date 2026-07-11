@@ -307,11 +307,13 @@ section { position: relative; }
   margin: 0 0 clamp(2.4rem, 4.5vw, 4rem);
   position: relative;
   z-index: 2;
+  overflow: hidden; /* animating letters clip inside the line box — can never touch the collage */
+  padding-bottom: 0.06em; /* room for descender-free caps at line-height 1 */
 }
 .hero-wordmark .wm-letter {
   display: inline-block;
   opacity: 0;
-  transform: translateY(0.35em);
+  transform: translateY(105%);
   animation: wmIn 640ms cubic-bezier(.2,0,0,1) forwards;
 }
 .hero-wordmark .wm-space { display: inline-block; width: 0.28em; }
