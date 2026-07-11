@@ -871,6 +871,109 @@ section { position: relative; }
 }
 
 /* ===================================================
+   CASE STUDY PAGES
+   =================================================== */
+.cs-main { display: flex; flex-direction: column; gap: 72px; padding-bottom: 100px; }
+
+.cs-num {
+  font-family: 'Inter';
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-amber);
+  display: block;
+  margin-bottom: 10px;
+}
+.cs-section h2 { font-size: clamp(28px, 3.6vw, 42px); margin-bottom: 20px; }
+.cs-body { max-width: 68ch; }
+.cs-body p { font-size: 16px; line-height: 1.7; color: var(--text); }
+.cs-body p + p { margin-top: 14px; }
+.cs-body ul { margin: 14px 0 0; padding-left: 20px; }
+.cs-body li { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 6px; }
+
+/* Audience facts grid */
+.cs-audience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.cs-audience .fact { padding: 20px 22px 18px; border-radius: 16px; }
+.cs-audience .k {
+  font-family: 'Inter'; font-size: 10px; letter-spacing: 0.20em;
+  text-transform: uppercase; font-weight: 600; color: var(--accent);
+  display: block; margin-bottom: 8px;
+}
+.cs-audience .v { font-size: 14px; color: var(--text); line-height: 1.55; }
+
+/* Distribution channel chips */
+.cs-channels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+/* Creative placeholders / embeds */
+.cs-creative-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+@media (max-width: 860px) { .cs-creative-grid { grid-template-columns: 1fr; } }
+
+/* Results metric tiles */
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.cs-metric { padding: 26px 22px 22px; border-radius: 16px; text-align: center; }
+.cs-metric .num {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  display: block;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.cs-metric .lbl { font-family: 'Inter'; font-size: 12px; letter-spacing: 0.03em; color: var(--muted); line-height: 1.45; }
+.cs-metrics-note { margin-top: 16px; font-size: 14px; color: var(--muted); font-style: italic; }
+
+/* Reflection */
+.cs-reflect {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.62;
+  color: var(--text);
+  padding: 28px 32px;
+  border-radius: 18px;
+  border-left: 3px solid var(--accent-amber);
+  background: var(--surface);
+  max-width: 66ch;
+}
+.cs-reflect .q {
+  font-family: 'Inter'; font-size: 10px; letter-spacing: 0.20em;
+  text-transform: uppercase; font-weight: 600; font-style: normal;
+  color: var(--accent-amber); display: block; margin-bottom: 12px;
+}
+
+/* Prev / Next project navigation */
+.cs-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+.cs-nav a { display: block; padding: 26px 28px; }
+.cs-nav .dir {
+  font-family: 'Inter'; font-size: 10px; letter-spacing: 0.20em;
+  text-transform: uppercase; font-weight: 600; color: var(--muted);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+  transition: color 200ms ease;
+}
+.cs-nav a:hover .dir { color: var(--accent); }
+.cs-nav .pname { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.2; }
+.cs-nav .next { text-align: right; }
+.cs-nav .next .dir { justify-content: flex-end; }
+@media (max-width: 640px) { .cs-nav { grid-template-columns: 1fr; } .cs-nav .next { text-align: left; } .cs-nav .next .dir { justify-content: flex-start; } }
+
+/* Case-study link on work cards */
+.cs-link { margin-top: 16px; }
+
+/* ===================================================
    BACKDROP-FILTER FALLBACK
    =================================================== */
 @supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
