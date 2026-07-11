@@ -19,13 +19,6 @@
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <filter id="liquid-refract" x="0%" y="0%" width="100%" height="100%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="noise"></feTurbulence>
-    <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-  </filter>
-</svg>
-
 <div class="shell">
 
 <div class="nav-wrap">
@@ -33,8 +26,8 @@
     <div class="brand">Rohit Balaji<span class="dot">.</span></div>
     <ul>
       <li><a href="work.html">Work</a></li>
-      <li><a href="video.html" class="hide-sm">Video</a></li>
-      <li><a href="skills.html" class="hide-sm">Skills</a></li>
+      <li><a href="social-growth.html" class="hide-sm">Growth</a></li>
+      <li><a href="video.html" class="hide-sm">Films</a></li>
       <li><a href="about.html" class="hide-sm">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -49,19 +42,19 @@
 <section class="hero" id="top">
   <div class="container hero-inner">
 
-    <div class="hero-copy hero-copy-panel">
+    <div class="hero-copy hero-copy-panel" id="heroPanel">
       <div class="hero-meta">
         <span class="eyebrow">Portfolio<span class="dot">.</span> 2026</span>
         <span class="dotsep"></span>
         <span class="hero-locale"><span class="pulse"></span>Belfast · Northern Ireland</span>
       </div>
 
-      <h1 class="hero-name">Rohit<br>Balaji.</h1>
+      <h1 class="hero-name" id="heroName">Rohit<br>Balaji.</h1>
 
       <p class="hero-role">Content strategy, video and paid social with editorial judgement.</p>
 
       <p class="hero-statement">
-        I turn stories into social-first content, campaign ideas and digital assets built around how audiences actually watch, read and respond.
+        I solve marketing problems through content — turning strategy into social-first video, campaigns and digital assets built around how audiences actually watch, read and respond.
       </p>
 
       <div class="hero-cta-row">
@@ -70,7 +63,7 @@
           <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
         <a class="btn" href="video.html">
-          <span>Watch Videos</span>
+          <span>Watch Films</span>
           <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
         <a class="btn" href="contact.html">
@@ -79,7 +72,7 @@
       </div>
     </div>
 
-    <div class="hero-image-wrap">
+    <div class="hero-image-wrap" id="heroImage">
       <img
         src="assets/rohit-hero-portrait.jpeg"
         alt="Rohit Balaji in a black-and-white portrait"
@@ -92,250 +85,408 @@
 
 <main>
 
-<!-- 02 MARKETING FOCUS -->
-<section id="focus" style="padding-top: clamp(2rem, 4vw, 3.5rem)">
+<!-- 02 SELECTED WORK -->
+<section id="selected-work" style="padding-top: clamp(2rem, 4vw, 3.5rem)">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">MARKETING FOCUS</div>
-        <h2>Creative built for the platform,<br>not just the brief.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">SELECTED WORK</div>
+        <h2>Projects, and how<br>each one thinks.</h2>
       </div>
-      <p class="lede">I work across content strategy, short-form video, social growth and paid campaign thinking — shaping ideas into formats that fit the audience, channel and objective.</p>
+      <p class="lede">Every project on this site is written as a marketing case study — strategy first, execution second. Hover a row to preview; click to read how it was built.</p>
     </div>
 
-    <div class="focus-grid">
-      <div class="glass-panel focus-card lift reveal" data-cursor>
-        <span class="focus-label">Paid Social</span>
-        <h4>Campaign structure &amp; testing</h4>
-        <p>Meta ads training, campaign structure, objectives, targeting, creative testing and performance reporting.</p>
-      </div>
-      <div class="glass-panel focus-card lift reveal" data-cursor>
-        <span class="focus-label">Content Strategy</span>
-        <h4>Ideas that fit the channel</h4>
-        <p>Campaign ideas, content calendars, brand voice, social hooks, messaging and creative routes.</p>
-      </div>
-      <div class="glass-panel focus-card lift reveal" data-cursor>
-        <span class="focus-label">Video Creative</span>
-        <h4>Short-form that moves</h4>
-        <p>Short-form edits, explainers, Reels, TikToks, captions, subtitles and visual hooks built for platform behaviour.</p>
-      </div>
-      <div class="glass-panel focus-card lift reveal" data-cursor>
-        <span class="focus-label">Audience Growth</span>
-        <h4>Organic strategy &amp; distribution</h4>
-        <p>Organic growth, social packaging, influencer coordination and performance-aware content planning.</p>
-      </div>
-    </div>
+    <div class="sw-list reveal">
 
-    <!-- Current project: Shopaire -->
-    <div class="glass-panel shopaire-card lift reveal" data-cursor>
-      <div>
-        <span class="sc-badge">Current Project</span>
-        <h4>Shopaire.in paid social</h4>
-        <p>Supporting paid social advertising work for Shopaire.in, with focus on campaign planning, creative direction, Meta ads structure and performance-focused content.</p>
-        <span class="shopaire-status">Active · Ongoing</span>
-      </div>
-    </div>
+      <a class="sw-row" href="case-shopaire.html">
+        <span class="sw-name">Shopaire.in</span>
+        <span class="sw-role">Paid Social &amp; Creative Strategy</span>
+        <span class="sw-cat">Ecommerce · Meta Ads</span>
+        <span class="sw-metric">Campaign live — results pending</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">Meta Ads · Preview</span>
+        </span>
+      </a>
 
-    <!-- Proof points -->
-    <div class="proof-bar">
-      <div class="glass-panel proof-item reveal">
-        <span class="proof-stat">74K</span>
-        <span class="proof-label">Instagram followers added<br>in six months</span>
-      </div>
-      <div class="glass-panel proof-item reveal">
-        <span class="proof-stat">30+</span>
-        <span class="proof-label">Reported articles filed<br>in one month</span>
-      </div>
-      <div class="glass-panel proof-item reveal">
-        <span class="proof-stat">14</span>
-        <span class="proof-label">Part educational video<br>series produced</span>
-      </div>
-      <div class="glass-panel proof-item reveal">
-        <span class="proof-stat">Meta</span>
-        <span class="proof-label">Ads trained — campaign<br>structure &amp; targeting</span>
-      </div>
-      <div class="glass-panel proof-item reveal">
-        <span class="proof-stat">Now</span>
-        <span class="proof-label">Running paid social<br>for Shopaire.in</span>
-      </div>
+      <a class="sw-row" href="case-shirt-in-a-box.html">
+        <span class="sw-name">Shirt in a Box</span>
+        <span class="sw-role">Social Media Manager · Content Producer</span>
+        <span class="sw-cat">Organic Growth</span>
+        <span class="sw-metric">+74,000 followers in six months</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">Instagram · Preview</span>
+        </span>
+      </a>
+
+      <a class="sw-row" href="case-irish-news.html">
+        <span class="sw-name">The Irish News</span>
+        <span class="sw-role">Junior Multimedia Journalist</span>
+        <span class="sw-cat">Editorial · Social Video</span>
+        <span class="sw-metric">Daily output across four platforms</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">Reels · Preview</span>
+        </span>
+      </a>
+
+      <a class="sw-row" href="case-da-box.html">
+        <span class="sw-name">Da Box</span>
+        <span class="sw-role">Content Marketing Associate</span>
+        <span class="sw-cat">Brand Content</span>
+        <span class="sw-metric">Three-channel content system</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">Social · Preview</span>
+        </span>
+      </a>
+
+      <a class="sw-row" href="case-yourstory.html">
+        <span class="sw-name">YourStory Media</span>
+        <span class="sw-role">Multimedia Content Producer</span>
+        <span class="sw-cat">Business Storytelling</span>
+        <span class="sw-metric">Explainers for India's startup platform</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">YouTube · Preview</span>
+        </span>
+      </a>
+
+      <a class="sw-row" href="case-asha-kiran.html">
+        <span class="sw-name">Asha Kiran Society</span>
+        <span class="sw-role">Video Producer · Content Coordinator</span>
+        <span class="sw-cat">Educational Video</span>
+        <span class="sw-metric">14-part series, end-to-end</span>
+        <span class="sw-thumb" aria-hidden="true">
+          <!-- video src: silent hover preview -->
+          <span class="sw-thumb-label">Series · Preview</span>
+        </span>
+      </a>
+
     </div>
   </div>
 </section>
 
-<!-- 03 EXPERIENCE PREVIEW -->
-<section id="work">
+<!-- 03 MARKETING PROCESS -->
+<section id="process">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">EXPERIENCE</div>
-        <h2>Newsroom speed.<br>Social growth.<br>Campaign thinking.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">MARKETING PROCESS</div>
+        <h2>The same six steps,<br>every project.</h2>
       </div>
-      <p class="lede">My experience spans journalism, video production, social media growth, brand content and paid social training. The common thread is knowing how to turn an idea into content that fits the audience and the platform.</p>
+      <p class="lede">Creative work is the fourth step, not the first. This is the order every project on this site follows — tap a step to expand it.</p>
     </div>
 
-    <div class="exp-list">
+    <div class="mp-flow reveal">
+      <div class="glass-panel mp-step open">
+        <button class="mp-head" type="button" aria-expanded="true">
+          <span class="mp-idx">01</span>
+          <span class="mp-title">Brief</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Define the actual problem before touching the creative. What does the brand need to happen — awareness, engagement, conversions — and how will we know it worked?</p></div>
+      </div>
+      <div class="glass-panel mp-step">
+        <button class="mp-head" type="button" aria-expanded="false">
+          <span class="mp-idx">02</span>
+          <span class="mp-title">Research</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Understand the audience before making anything for them — who they are, where they spend attention, what they respond to, and what everyone else in the category is already doing.</p></div>
+      </div>
+      <div class="glass-panel mp-step">
+        <button class="mp-head" type="button" aria-expanded="false">
+          <span class="mp-idx">03</span>
+          <span class="mp-title">Strategy</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Decide the angle, the platforms, the formats and the message before production starts. Strategy is choosing what not to make as much as what to make.</p></div>
+      </div>
+      <div class="glass-panel mp-step">
+        <button class="mp-head" type="button" aria-expanded="false">
+          <span class="mp-idx">04</span>
+          <span class="mp-title">Creative</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Only now: hooks, scripts, shooting, editing, captions and design — built platform-native from the start, because the strategy already decided where this content has to win.</p></div>
+      </div>
+      <div class="glass-panel mp-step">
+        <button class="mp-head" type="button" aria-expanded="false">
+          <span class="mp-idx">05</span>
+          <span class="mp-title">Distribution</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Content is only one part of a marketing system. Organic, paid, influencer, email and search each have their own rules — the work is placed where it can actually perform.</p></div>
+      </div>
+      <div class="glass-panel mp-step">
+        <button class="mp-head" type="button" aria-expanded="false">
+          <span class="mp-idx">06</span>
+          <span class="mp-title">Performance</span>
+          <svg class="mp-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </button>
+        <div class="mp-body"><p>Read the results honestly, learn what worked and why, and feed it back into the next brief. Every case study on this site ends with what I'd improve — because that's the step that compounds.</p></div>
+      </div>
+    </div>
 
-      <article class="glass-panel exp featured lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Jun 2023 — Present</span>
-          <span class="where"><span class="pin"></span>Belfast, NI</span>
-        </div>
-        <div class="body">
-          <div class="featured-badge"><span class="bar"></span>Current role</div>
-          <h3>Junior Multimedia Journalist</h3>
-          <p class="org">The Irish News</p>
-          <p>Work across video, social, homepage editing, headlines and explainers for a Northern Ireland newsroom. Shape serious stories for Instagram, TikTok, YouTube and digital readers, balancing clarity, speed and platform behaviour.</p>
-          <div class="stories">
-            <div class="label">Stories covered</div>
-            <ul>
-              <li><span class="num">01</span>The Noah Donohoe inquest</li>
-              <li><span class="num">02</span>The Natalie McNally murder trial</li>
-              <li><span class="num">03</span>The Gerry Adams civil case</li>
-              <li><span class="num">04</span>Casement Park political developments</li>
-            </ul>
+    <div style="margin-top:24px">
+      <a class="view-more reveal" href="marketing.html">
+        How I think about marketing
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 SOCIAL GROWTH -->
+<section id="growth">
+  <div class="container">
+    <div class="s-head reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">SOCIAL GROWTH</div>
+        <h2>Accounts grown,<br>not just posted to.</h2>
+      </div>
+      <p class="lede">Organic growth built on repeatable formats, platform behaviour and creator partnerships — with the numbers to show for it.</p>
+    </div>
+
+    <div class="growth-grid">
+      <div class="glass-panel growth-card lift reveal" data-cursor>
+        <div class="growth-top">
+          <div class="growth-avatar"><!-- profile image --><span>SB</span></div>
+          <div>
+            <div class="growth-handle">@shirtinabox</div>
+            <div class="growth-org">Shirt in a Box · Belfast</div>
           </div>
-          <p class="mkt-rel"><strong>Marketing relevance:</strong> Fast creative judgement, audience-aware packaging, headline testing instincts, short-form video and digital distribution.</p>
         </div>
-      </article>
+        <div class="growth-stat-row">
+          <div class="growth-stat"><span class="n"><span class="cs-count" data-target="74000" data-prefix="+">0</span></span><span class="l">Followers gained</span></div>
+        </div>
+        <span class="growth-period">Sep 2022 — Jan 2023 · Instagram</span>
+        <p class="strategy">Repeatable kit-culture formats, influencer seeding and a content calendar across 5+ accounts. Every influencer campaign passed 100,000 views. Current follower count to be added.</p>
+      </div>
 
-      <article class="glass-panel exp lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">Sep 2022 — Jan 2023</span>
-          <span class="where"><span class="pin"></span>Belfast, NI</span>
+      <div class="glass-panel growth-card lift reveal" data-cursor>
+        <div class="growth-top">
+          <div class="growth-avatar" style="background:linear-gradient(135deg, var(--accent-red), var(--accent-amber))"><!-- profile image --><span>IN</span></div>
+          <div>
+            <div class="growth-handle">@irish_news</div>
+            <div class="growth-org">The Irish News · Newsroom social</div>
+          </div>
         </div>
-        <div class="body">
-          <h3>Social Media Manager · Content Producer</h3>
-          <p class="org">Shirt in a Box</p>
-          <p>Grew a Belfast retailer's Instagram by <strong>74,000 followers</strong> in six months through organic content strategy. Managed editors, planned content across multiple accounts and helped turn products into repeatable social formats.</p>
-          <p class="mkt-rel"><strong>Marketing relevance:</strong> Organic growth, social content systems, product storytelling, influencer campaigns and performance-aware creative.</p>
+        <div class="growth-stat-row">
+          <div class="growth-stat"><span class="n">Daily</span><span class="l">Reels, TikToks &amp; YouTube output</span></div>
         </div>
-      </article>
+        <span class="growth-period">Jun 2023 — Present · IG / TikTok / YouTube</span>
+        <p class="strategy">Platform-native packaging of serious journalism — vertical video, subtitles, headline testing and formats that make news perform in entertainment feeds. Reach figures to be added.</p>
+      </div>
 
-      <article class="glass-panel exp lift reveal" data-cursor>
-        <div class="left">
-          <span class="when">2026 — Present</span>
-          <span class="where"><span class="pin"></span>Remote</span>
+      <div class="glass-panel growth-card lift reveal" data-cursor>
+        <div class="growth-top">
+          <div class="growth-avatar" style="background:linear-gradient(135deg, var(--accent-blue), var(--accent))"><!-- profile image --><span>SH</span></div>
+          <div>
+            <div class="growth-handle">@shopaire.in</div>
+            <div class="growth-org">Shopaire.in · Paid social</div>
+          </div>
         </div>
-        <div class="body">
-          <div class="featured-badge"><span class="bar"></span>Current project</div>
-          <h3>Paid Social &amp; Creative Strategy</h3>
-          <p class="org">Shopaire.in</p>
-          <p>Currently supporting paid social advertising work for Shopaire.in, focusing on Meta ads structure, creative routes, hooks, captions and campaign-ready content.</p>
-          <p class="mkt-rel"><strong>Marketing relevance:</strong> Paid social setup, creative testing, ecommerce messaging and campaign execution.</p>
+        <div class="growth-stat-row">
+          <div class="growth-stat"><span class="n">Live</span><span class="l">Meta campaign in learning phase</span></div>
         </div>
-      </article>
-
+        <span class="growth-period">2026 — Present · Meta Ads</span>
+        <p class="strategy">Creative-led Meta advertising — hook-first video routes, structured creative testing and captions matched to purchase intent. Results to be added once campaign data is available.</p>
+      </div>
     </div>
 
-    <a class="view-more" href="work.html">
-      View full experience
-      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-    </a>
+    <div style="margin-top:24px">
+      <a class="view-more reveal" href="social-growth.html">
+        The full growth story
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- 04 VIDEO REEL -->
-<section id="video">
+<!-- 05 VIDEO SHOWCASE (cinematic reel) -->
+<section id="films">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">VIDEO</div>
-        <h2>Creative that moves<br>before you click.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">FILMS</div>
+        <h2>The reel.</h2>
       </div>
-      <p class="lede">A selection of short-form, explainer and campaign-style video work. Hover a card to preview. Each project page holds the full story, stats and context.</p>
+      <p class="lede">Short-form, explainer and campaign video — presented as a single strip of film. Scroll through; hover a frame to bring it forward.</p>
     </div>
   </div>
 
-  <div class="video-reel" role="list" aria-label="Video projects">
+  <div class="cine-wrap">
+    <div class="cine-reel" id="cineReel" role="list" aria-label="Video showcase">
 
-    <a class="video-card" href="video.html" role="listitem">
-      <div class="vframe">
-        <!-- VIDEO SOURCE: add src="path/to/preview.mp4" poster="path/to/thumb.jpg" to the video element below -->
-        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-noah.jpg"></video> -->
-        <span class="vlabel">News Explainer · Instagram</span>
-        <div class="play" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      <a class="cine-frame" href="video.html" role="listitem">
+        <!-- Instagram Reel embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">Instagram Reel</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Noah Donohoe explainer</div>
+          <div class="cine-sub">The Irish News · Script + edit</div>
         </div>
-      </div>
-      <div class="vbody">
-        <h4>Noah Donohoe explainer</h4>
-        <p>Short-form explainer built to make a complex story clear for social audiences.</p>
-        <div class="vbadges">
-          <span class="video-stat-badge">Instagram / TikTok</span>
-          <span class="video-stat-badge">Script + edit</span>
-          <span class="video-stat-badge">Views to be added</span>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="video-card" href="video.html" role="listitem">
-      <div class="vframe">
-        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-casement.jpg"></video> -->
-        <span class="vlabel">News Reel · Instagram</span>
-        <div class="play" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      <a class="cine-frame" href="video.html" role="listitem">
+        <!-- Instagram Reel embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">Instagram Reel</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Casement Park, explained</div>
+          <div class="cine-sub">The Irish News · Edit + captions</div>
         </div>
-      </div>
-      <div class="vbody">
-        <h4>Casement Park, explained</h4>
-        <p>The political story behind the stadium debate, packaged for a social-first audience.</p>
-        <div class="vbadges">
-          <span class="video-stat-badge">Instagram Reel</span>
-          <span class="video-stat-badge">Edit + captions</span>
-          <span class="video-stat-badge">Views to be added</span>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="video-card" href="video.html" role="listitem">
-      <div class="vframe">
-        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-irish.jpg"></video> -->
-        <span class="vlabel">Explainer · YouTube</span>
-        <div class="play" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      <a class="cine-frame" href="video.html" role="listitem">
+        <!-- TikTok embed or video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">TikTok</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Kit-culture format</div>
+          <div class="cine-sub">Shirt in a Box · Creative direction</div>
         </div>
-      </div>
-      <div class="vbody">
-        <h4>Irish-language explainer</h4>
-        <p>Bilingual explainer with full subtitle formatting for a dual-language audience.</p>
-        <div class="vbadges">
-          <span class="video-stat-badge">YouTube</span>
-          <span class="video-stat-badge">Script + subtitles</span>
-          <span class="video-stat-badge">Views to be added</span>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="video-card" href="video.html" role="listitem">
-      <div class="vframe">
-        <!-- <video muted loop playsinline preload="none" poster="assets/thumb-yourstory.jpg"></video> -->
-        <span class="vlabel">Brand · YouTube</span>
-        <div class="play" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      <a class="cine-frame" href="video.html" role="listitem">
+        <!-- video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">YouTube</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">Irish-language explainer</div>
+          <div class="cine-sub">The Irish News · Script + subtitles</div>
         </div>
-      </div>
-      <div class="vbody">
-        <h4>YourStory startup explainer</h4>
-        <p>Founder and technology story turned into accessible digital content for one of India's major media platforms.</p>
-        <div class="vbadges">
-          <span class="video-stat-badge">YouTube</span>
-          <span class="video-stat-badge">Script + edit</span>
-          <span class="video-stat-badge">Views to be added</span>
-        </div>
-      </div>
-    </a>
+      </a>
 
+      <a class="cine-frame" href="video.html" role="listitem">
+        <!-- video src -->
+        <span class="sheen"></span>
+        <span class="cine-platform">YouTube</span>
+        <span class="cine-views">Views to be added</span>
+        <div class="cine-meta">
+          <div class="cine-client">YourStory startup explainer</div>
+          <div class="cine-sub">YourStory Media · Script + edit</div>
+        </div>
+      </a>
+
+    </div>
   </div>
 
   <div class="container" style="margin-top:8px">
     <a class="view-more reveal" href="video.html">
-      View video work
+      All film work
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
     </a>
   </div>
 </section>
 
-<!-- 05 ABOUT + CONTACT -->
+<!-- 06 PERFORMANCE METRICS -->
+<section id="metrics">
+  <div class="container">
+    <div class="s-head reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">PERFORMANCE</div>
+        <h2>The numbers<br>behind the work.</h2>
+      </div>
+      <p class="lede">Real figures only — combined views and campaign metrics will be added as data becomes available.</p>
+    </div>
+
+    <div class="pm-band">
+      <div class="glass-panel pm-item reveal"><span class="n"><span class="cs-count" data-target="74000" data-prefix="+">0</span></span><span class="l">Instagram followers grown in six months</span></div>
+      <div class="glass-panel pm-item reveal"><span class="n"><span class="cs-count" data-target="100000" data-suffix="+">0</span></span><span class="l">Views passed by every influencer campaign</span></div>
+      <div class="glass-panel pm-item reveal"><span class="n"><span class="cs-count" data-target="100" data-suffix="+">0</span></span><span class="l">Visual content pieces designed &amp; produced</span></div>
+      <div class="glass-panel pm-item reveal"><span class="n"><span class="cs-count" data-target="14">0</span></span><span class="l">Part educational video series, end-to-end</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 EXPERIENCE (horizontal journey) -->
+<section id="experience">
+  <div class="container">
+    <div class="s-head reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">EXPERIENCE</div>
+        <h2>One direction<br>of travel.</h2>
+      </div>
+      <p class="lede">Every role added a layer — journalism taught the story, video taught the craft, strategy taught the system, paid social taught the market. Hover a milestone to expand it.</p>
+    </div>
+
+    <div class="journey reveal">
+      <div class="glass-panel journey-step" data-cursor>
+        <span class="j-idx">01</span>
+        <h4>Journalism</h4>
+        <p class="j-detail">Deccan Chronicle and The Irish News — research, speed, headline instinct and editorial judgement. 30+ articles filed in a single month; national court and political stories covered daily.</p>
+      </div>
+      <div class="glass-panel journey-step" data-cursor>
+        <span class="j-idx">02</span>
+        <h4>Video Production</h4>
+        <p class="j-detail">Asha Kiran and YourStory — end-to-end production: scripting, filming, editing, animation and sound design. A 14-part educational series delivered solo.</p>
+      </div>
+      <div class="glass-panel journey-step" data-cursor>
+        <span class="j-idx">03</span>
+        <h4>Content Strategy</h4>
+        <p class="j-detail">Shirt in a Box and Da Box — repeatable formats, content calendars, brand voice and a team of seven editors. Instagram grown by 74,000 followers in six months.</p>
+      </div>
+      <div class="glass-panel journey-step" data-cursor>
+        <span class="j-idx">04</span>
+        <h4>Paid Social</h4>
+        <p class="j-detail">Meta ads training applied in live campaign work for Shopaire.in — campaign structure, creative testing, hooks and performance measurement.</p>
+      </div>
+      <div class="glass-panel journey-step" data-cursor>
+        <span class="j-idx">05</span>
+        <h4>Marketing</h4>
+        <p class="j-detail">Where it all lands: strategy-first content marketing — audience understanding, creative systems and distribution thinking, backed by production skills most marketers have to outsource.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px">
+      <a class="view-more reveal" href="work.html">
+        View full experience
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="s-head reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">CERTIFICATIONS &amp; EDUCATION</div>
+        <h2>Trained, not<br>just self-taught.</h2>
+      </div>
+      <p class="lede">Formal training behind the practical work — marketing, media production and journalism.</p>
+    </div>
+
+    <div class="cert-list">
+      <div class="glass-panel cert-card lift reveal" data-cursor>
+        <span class="c-when">Meta · 2025</span>
+        <h4>Meta Ads Training</h4>
+        <p>Campaign structure, objectives, targeting, creative testing, budgets and performance measurement.</p>
+      </div>
+      <div class="glass-panel cert-card lift reveal" data-cursor>
+        <span class="c-when">2021 — 2022</span>
+        <h4>Queen's University Belfast</h4>
+        <p>MA, Media and Broadcast Production.</p>
+      </div>
+      <div class="glass-panel cert-card lift reveal" data-cursor>
+        <span class="c-when">2018 — 2021</span>
+        <h4>Christ University, Bangalore</h4>
+        <p>BA, Journalism.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 CONTACT -->
 <section id="about">
   <div class="container">
     <div class="s-head reveal">
@@ -373,7 +524,9 @@
       <div>© 2026 Rohit Balaji · Belfast</div>
       <nav class="foot-links" aria-label="Footer navigation">
         <a href="work.html">Work</a>
-        <a href="video.html">Video</a>
+        <a href="social-growth.html">Growth</a>
+        <a href="video.html">Films</a>
+        <a href="marketing.html">Marketing</a>
         <a href="skills.html">Skills</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -394,6 +547,8 @@ function toggleTheme(){
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
 }
+
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---- Scroll reveal ---- */
 var io = new IntersectionObserver(function(entries){
@@ -435,19 +590,119 @@ if(supportsHover){
   });
 }
 
-/* ---- Video hover-to-play ---- */
-document.querySelectorAll('.video-card').forEach(function(card){
-  var video = card.querySelector('video');
-  if(!video) return;
-  card.addEventListener('mouseenter', function(){
-    video.muted = true;
-    video.play().catch(function(){});
+/* ---- Count-up metrics ---- */
+var cio = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting) return;
+    cio.unobserve(e.target);
+    var el = e.target, t = parseInt(el.dataset.target, 10),
+        suf = el.dataset.suffix || '', pre = el.dataset.prefix || '';
+    if(reduceMotion){ el.textContent = pre + t.toLocaleString() + suf; return; }
+    var start = null, dur = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + Math.round(t * eased).toLocaleString() + suf;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   });
-  card.addEventListener('mouseleave', function(){
-    video.pause();
-    video.currentTime = 0;
+}, { threshold: 0.4 });
+document.querySelectorAll('.cs-count').forEach(function(el){ cio.observe(el); });
+
+/* ---- Marketing process accordion ---- */
+document.querySelectorAll('.mp-step').forEach(function(step){
+  step.querySelector('.mp-head').addEventListener('click', function(){
+    var isOpen = step.classList.contains('open');
+    document.querySelectorAll('.mp-step.open').forEach(function(s){
+      s.classList.remove('open');
+      s.querySelector('.mp-head').setAttribute('aria-expanded', 'false');
+    });
+    if(!isOpen){
+      step.classList.add('open');
+      step.querySelector('.mp-head').setAttribute('aria-expanded', 'true');
+    }
   });
 });
+
+/* ---- Growth cards: grayscale -> colour ---- */
+var gio = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      setTimeout(function(){ e.target.classList.add('in-colour'); }, 250);
+      gio.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.growth-card').forEach(function(el){ gio.observe(el); });
+
+/* ---- Cinematic reel: advance on enter + cursor tilt ---- */
+var reel = document.getElementById('cineReel');
+if(reel && !reduceMotion){
+  var advanced = false;
+  var rio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !advanced){
+        advanced = true;
+        reel.scrollTo({ left: 90, behavior: 'smooth' });
+        rio.unobserve(reel);
+      }
+    });
+  }, { threshold: 0.35 });
+  rio.observe(reel);
+}
+if(supportsHover){
+  document.querySelectorAll('.cine-frame').forEach(function(frame){
+    frame.addEventListener('pointermove', function(e){
+      if(reduceMotion) return;
+      var r = frame.getBoundingClientRect();
+      var rx = ((e.clientY - r.top) / r.height - 0.5) * -3.5;
+      var ry = ((e.clientX - r.left) / r.width - 0.5) * 4.5;
+      frame.style.transform = 'scale(1.035) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
+    });
+    frame.addEventListener('pointerleave', function(){
+      frame.style.transform = '';
+    });
+    var video = frame.querySelector('video');
+    if(video){
+      frame.addEventListener('mouseenter', function(){ video.muted = true; video.play().catch(function(){}); });
+      frame.addEventListener('mouseleave', function(){ video.pause(); video.currentTime = 0; });
+    }
+  });
+}
+
+/* ---- Selected work: silent hover preview ---- */
+if(supportsHover){
+  document.querySelectorAll('.sw-row').forEach(function(row){
+    var video = row.querySelector('.sw-thumb video');
+    if(!video) return;
+    row.addEventListener('mouseenter', function(){ video.muted = true; video.play().catch(function(){}); });
+    row.addEventListener('mouseleave', function(){ video.pause(); video.currentTime = 0; });
+  });
+}
+
+/* ---- Hero scroll motion: portrait scales, glass shifts, heading eases ---- */
+var heroImage = document.getElementById('heroImage');
+var heroPanel = document.getElementById('heroPanel');
+var heroName  = document.getElementById('heroName');
+if(heroImage && !reduceMotion){
+  var ticking = false;
+  function heroScroll(){
+    var y = window.scrollY;
+    var limit = window.innerHeight;
+    if(y < limit){
+      var p = y / limit;
+      heroImage.style.transform = 'scale(' + (1 + p * 0.05) + ')';
+      heroPanel.style.transform = 'translateY(' + (p * 22) + 'px)';
+      heroName.style.transform  = 'translateY(' + (p * 34) + 'px)';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(heroScroll); ticking = true; }
+  }, { passive: true });
+}
 </script>
 
 </body>
