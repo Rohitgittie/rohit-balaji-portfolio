@@ -319,11 +319,20 @@ section { position: relative; }
   to { opacity: 1; transform: translateY(0); }
 }
 .hero-stage { position: relative; }
+
+/* Two-column zone under the wordmark: copy left, scatter collage right.
+   The collage owns its column — text and images can never overlap. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.hero-copy-col { min-width: 0; }
 .hero-scatter {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  height: clamp(300px, 32vw, 420px);
   pointer-events: none;
-  z-index: 1;
 }
 .hero-scatter .sc-img {
   position: absolute;
@@ -341,16 +350,17 @@ section { position: relative; }
   to { opacity: 1; transform: translateY(0) rotate(var(--rot, 0deg)) scale(1); }
 }
 .sc-portrait {
-  top: -8%; right: 2%;
-  width: clamp(150px, 19vw, 260px);
+  top: 0; right: 0;
+  width: clamp(170px, 18vw, 250px);
   aspect-ratio: 4/5;
   --rot: 2.2deg;
   animation-delay: 750ms;
+  z-index: 2;
 }
 .sc-portrait img { filter: grayscale(100%); }
 .sc-b {
-  bottom: 4%; right: 24%;
-  width: clamp(90px, 11vw, 150px);
+  bottom: 6%; left: 4%;
+  width: clamp(96px, 10vw, 140px);
   aspect-ratio: 1;
   --rot: -3deg;
   animation-delay: 950ms;
@@ -359,17 +369,19 @@ section { position: relative; }
   font-size: clamp(22px, 3vw, 34px); color: var(--muted);
 }
 .sc-c {
-  top: 6%; right: 30%;
-  width: clamp(70px, 8vw, 110px);
+  top: 14%; left: 14%;
+  width: clamp(64px, 7vw, 100px);
   aspect-ratio: 9/14;
   --rot: 4deg;
   animation-delay: 1100ms;
   background: linear-gradient(160deg, var(--surface), var(--line));
+  z-index: 1;
 }
 @media (max-width: 860px) {
-  .sc-portrait { position: relative; inset: auto; width: min(60%, 260px); margin-top: 28px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .hero-scatter { height: auto; }
+  .sc-portrait { position: relative; inset: auto; width: min(62%, 260px); }
   .sc-b, .sc-c { display: none; }
-  .hero-scatter { position: static; }
 }
 .hero-statement {
   font-family: 'Inter', sans-serif;
