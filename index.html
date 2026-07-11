@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rohit Balaji — Content Strategy, Video & Paid Social</title>
-<meta name="description" content="Rohit Balaji — content strategist, short-form video producer and paid social marketer with a journalism background. Belfast-based.">
+<title>Rohit Balaji — Marketing Strategy, Content & Growth</title>
+<meta name="description" content="Rohit Balaji — marketing strategist who uses content as the vehicle: audience understanding, creative systems, distribution and performance. Belfast-based.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
 (function(){
-  var s=localStorage.getItem('theme')||
-    (window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var s=localStorage.getItem('theme')||'light';
   document.documentElement.setAttribute('data-theme',s);
 })();
 </script>
@@ -41,41 +40,37 @@
 
 <!-- 01 HERO -->
 <section class="hero" id="top">
-  <div class="container hero-inner">
+  <div class="container hero-stage">
 
-    <div class="hero-copy hero-copy-panel" id="heroPanel">
-      <div class="hero-meta">
-        <span class="eyebrow">Portfolio<span class="dot">.</span> 2026</span>
-        <span class="dotsep"></span>
-        <span class="hero-locale"><span class="pulse"></span>Belfast · Northern Ireland</span>
-      </div>
-
-      <h1 class="hero-name" id="heroName">Rohit<br>Balaji.</h1>
-
-      <p class="hero-role">Content strategy, video and paid social with editorial judgement.</p>
-
-      <p class="hero-statement">
-        I solve marketing problems through content — turning strategy into social-first video, campaigns and digital assets built around how audiences actually watch, read and respond.
-      </p>
-
-      <div class="hero-cta-row">
-        <a class="btn btn--amber" href="work.html">
-          <span>View Work</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-        <a class="btn" href="assets/rohit-balaji-cv.pdf" download>
-          <span>Download CV</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m5 12 7 7 7-7"></path></svg>
-        </a>
-      </div>
+    <div class="hero-meta">
+      <span class="eyebrow">Marketing<span class="dot">.</span> Content<span class="dot">.</span> Growth<span class="dot">.</span></span>
+      <span class="dotsep"></span>
+      <span class="hero-locale"><span class="pulse"></span>Belfast · Northern Ireland</span>
     </div>
 
-    <div class="hero-image-wrap" id="heroImage">
-      <img
-        src="assets/rohit-hero-portrait.jpeg"
-        alt="Rohit Balaji in a black-and-white portrait"
-        class="hero-image"
-      >
+    <h1 class="hero-wordmark" id="heroWordmark" aria-label="Rohit Balaji">ROHIT BALAJI</h1>
+
+    <div class="hero-scatter" aria-hidden="true">
+      <div class="sc-img sc-portrait">
+        <img src="assets/rohit-hero-portrait.jpeg" alt="">
+      </div>
+      <div class="sc-img sc-b"><span>+74K</span></div>
+      <div class="sc-img sc-c"></div>
+    </div>
+
+    <p class="hero-statement">
+      I build marketing campaigns that combine strategy, storytelling and performance — content designed around how audiences actually watch, read and respond, then measured against what it was meant to achieve.
+    </p>
+
+    <div class="hero-cta-row">
+      <a class="btn btn--amber" href="work.html">
+        <span>View Work</span>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+      <a class="btn" href="assets/rohit-balaji-cv.pdf" download>
+        <span>Download CV</span>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m5 12 7 7 7-7"></path></svg>
+      </a>
     </div>
 
   </div>
@@ -83,316 +78,152 @@
 
 <main>
 
-<!-- 02 SELECTED WORK -->
-<section id="selected-work" style="padding-top: clamp(2rem, 4vw, 3.5rem)">
+<!-- 02 POSITIONING LINE -->
+<section>
+  <div class="container">
+    <p class="positioning reveal">Content built around how audiences <span class="dim">actually</span> watch, read and respond.</p>
+  </div>
+</section>
+
+<!-- 03 CASE BLOCKS -->
+<section id="work">
+  <div class="container">
+
+    <!-- SHIRT IN A BOX -->
+    <article class="case-block reveal" style="margin-bottom: clamp(64px, 9vw, 110px)">
+      <div class="cb-eyebrow"><span class="cb-ico" aria-hidden="true">📈</span>Organic growth · Shirt in a Box</div>
+      <h2 class="cb-statement">Shirt in a Box: <span class="hl">+74,000 followers in six months</span> through repeatable kit-culture formats.</h2>
+      <div class="reel-row" data-reels="shirtinabox" aria-label="Shirt in a Box reels"></div>
+      <div class="cb-stats">
+        <div class="cb-stat reveal"><span class="n"><span class="accent"><span class="cs-count" data-target="74000" data-prefix="+">0</span></span></span><span class="l">Followers gained · six months</span></div>
+        <div class="cb-stat reveal"><span class="n"><span class="cs-count" data-target="100000" data-suffix="+">0</span></span><span class="l">Views · every influencer campaign</span></div>
+        <div class="cb-stat reveal"><span class="n"><span class="cs-count" data-target="100" data-suffix="+">0</span></span><span class="l">Content pieces produced</span></div>
+      </div>
+      <div class="cb-foot">
+        <a class="view-more" href="case-shirt-in-a-box.html">Show case
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- THE IRISH NEWS -->
+    <article class="case-block reveal" style="margin-bottom: clamp(64px, 9vw, 110px)">
+      <div class="cb-eyebrow"><span class="cb-ico" aria-hidden="true">🗞️</span>Newsroom content strategy · The Irish News</div>
+      <h2 class="cb-statement">The Irish News: serious journalism packaged to perform on <span class="hl">Instagram, TikTok and YouTube</span> — every day.</h2>
+      <div class="reel-row" data-reels="irishnews" aria-label="The Irish News reels"></div>
+      <div class="cb-stats">
+        <div class="cb-stat reveal"><span class="n"><span class="cs-count" data-target="4">0</span></span><span class="l">National stories covered end-to-end</span></div>
+        <div class="cb-stat reveal"><span class="n">Daily</span><span class="l">Reels, TikToks &amp; YouTube output</span></div>
+        <div class="cb-stat reveal"><span class="n"><span class="cs-count" data-target="3">0</span>+</span><span class="l">Platforms served, native formats</span></div>
+      </div>
+      <div class="cb-foot">
+        <a class="view-more" href="case-irish-news.html">Show case
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- SHOPAIRE -->
+    <article class="case-block reveal">
+      <div class="cb-eyebrow"><span class="cb-ico" aria-hidden="true">🎯</span>Paid social · Shopaire.in · Live</div>
+      <h2 class="cb-statement">Shopaire.in: creative-led Meta advertising — <span class="hl">hooks first</span>, campaign structure built to learn.</h2>
+      <div class="reel-row" data-reels="shopaire" aria-label="Shopaire reels"></div>
+      <div class="cb-foot">
+        <a class="view-more" href="case-shopaire.html">Show case
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 04 MARKETING PROCESS -->
+<section id="process">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">SELECTED WORK</div>
-        <h2>Projects, and how<br>each one thinks.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">MARKETING PROCESS</div>
+        <h2>How every project<br>gets made.</h2>
       </div>
-      <p class="lede">Every project on this site is written as a marketing case study — strategy first, execution second. Hover a row to preview; click to read how it was built.</p>
+      <p class="lede">Creative is step four, not step one. The same six steps sit behind every case study on this site.</p>
     </div>
 
-    <div class="sw-list reveal">
-
-      <a class="sw-row" href="case-shopaire.html">
-        <span class="sw-name">Shopaire.in</span>
-        <span class="sw-role">Paid Social &amp; Creative Strategy</span>
-        <span class="sw-cat">Ecommerce · Meta Ads</span>
-        <span class="sw-metric">Campaign live — results pending</span>
-        <span class="sw-thumb" aria-hidden="true">
-          <!-- video src: silent hover preview -->
-          <span class="sw-thumb-label">Meta Ads · Preview</span>
-        </span>
-      </a>
-
-      <a class="sw-row" href="case-shirt-in-a-box.html">
-        <span class="sw-name">Shirt in a Box</span>
-        <span class="sw-role">Social Media Manager · Content Producer</span>
-        <span class="sw-cat">Organic Growth</span>
-        <span class="sw-metric">+74,000 followers in six months</span>
-        <span class="sw-thumb" aria-hidden="true">
-          <!-- video src: silent hover preview -->
-          <span class="sw-thumb-label">Instagram · Preview</span>
-        </span>
-      </a>
-
-      <a class="sw-row" href="case-irish-news.html">
-        <span class="sw-name">The Irish News</span>
-        <span class="sw-role">Junior Multimedia Journalist</span>
-        <span class="sw-cat">Editorial · Social Video</span>
-        <span class="sw-metric">Daily output across four platforms</span>
-        <span class="sw-thumb" aria-hidden="true">
-          <!-- video src: silent hover preview -->
-          <span class="sw-thumb-label">Reels · Preview</span>
-        </span>
-      </a>
-
-    </div>
-
-    <div style="margin-top:24px; display:flex; gap:28px; flex-wrap:wrap">
-      <a class="view-more reveal" href="work.html">
-        All case studies
-        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-      </a>
-      <a class="view-more reveal" href="marketing.html">
-        How I think about marketing
-        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-      </a>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="svc-num">01</span><h4>Brief</h4><p>Define the actual problem before touching the creative — what needs to happen, and how we'll know it worked.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">02</span><h4>Research</h4><p>Understand the audience before making anything for them — where they spend attention and what they respond to.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">03</span><h4>Strategy</h4><p>Choose the angle, platforms, formats and message. Strategy is deciding what not to make as much as what to make.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">04</span><h4>Creative</h4><p>Only now: hooks, scripts, edits, captions — platform-native from the start, because the strategy chose the battlefield.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">05</span><h4>Distribution</h4><p>Organic, paid, influencer, email, search — each has its own rules. Work is placed where it can actually perform.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">06</span><h4>Performance</h4><p>Read the results honestly and feed them back into the next brief. This is the step that compounds.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 04 SOCIAL GROWTH -->
-<section id="growth">
+<!-- 05 TESTIMONIALS (component built; hidden until quotes exist) -->
+<section id="testimonials" hidden>
   <div class="container">
-    <div class="s-head reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px">GROWTH</div>
-        <h2>Accounts grown,<br>not just posted to.</h2>
+    <div class="eyebrow reveal" style="margin-bottom:24px">WHAT PEOPLE SAY</div>
+    <div class="testi" data-testi>
+      <!-- Populate testiData in the script below, then remove `hidden` from this section -->
+      <blockquote class="testi-quote" data-testi-quote></blockquote>
+      <div class="testi-who">
+        <div class="tw-avatar" data-testi-avatar></div>
+        <div>
+          <div class="tw-name" data-testi-name></div>
+          <div class="tw-title" data-testi-title></div>
+        </div>
       </div>
-      <p class="lede">Organic growth built on repeatable formats, platform behaviour and creator partnerships — with the numbers to show for it.</p>
-    </div>
-
-    <div class="growth-grid">
-      <div class="glass-panel growth-card lift reveal" data-cursor>
-        <div class="growth-top">
-          <div class="growth-avatar"><!-- profile image --><span>SB</span></div>
-          <div>
-            <div class="growth-handle">@shirtinabox</div>
-            <div class="growth-org">Shirt in a Box · Belfast</div>
-          </div>
-        </div>
-        <div class="growth-stat-row">
-          <div class="growth-stat"><span class="n"><span class="cs-count" data-target="74000" data-prefix="+">0</span></span><span class="l">Followers gained</span></div>
-        </div>
-        <span class="growth-period">Sep 2022 — Jan 2023 · Instagram</span>
-        <p class="strategy">Repeatable kit-culture formats, influencer seeding and a content calendar across 5+ accounts. Every influencer campaign passed 100,000 views. Current follower count to be added.</p>
-      </div>
-
-      <div class="glass-panel growth-card lift reveal" data-cursor>
-        <div class="growth-top">
-          <div class="growth-avatar" style="background:linear-gradient(135deg, var(--accent-red), var(--accent-amber))"><!-- profile image --><span>IN</span></div>
-          <div>
-            <div class="growth-handle">@irish_news</div>
-            <div class="growth-org">The Irish News · Newsroom social</div>
-          </div>
-        </div>
-        <div class="growth-stat-row">
-          <div class="growth-stat"><span class="n">Daily</span><span class="l">Reels, TikToks &amp; YouTube output</span></div>
-        </div>
-        <span class="growth-period">Jun 2023 — Present · IG / TikTok / YouTube</span>
-        <p class="strategy">Platform-native packaging of serious journalism — vertical video, subtitles, headline testing and formats that make news perform in entertainment feeds. Reach figures to be added.</p>
-      </div>
-
-      <div class="glass-panel growth-card lift reveal" data-cursor>
-        <div class="growth-top">
-          <div class="growth-avatar" style="background:linear-gradient(135deg, var(--accent-blue), var(--accent))"><!-- profile image --><span>SH</span></div>
-          <div>
-            <div class="growth-handle">@shopaire.in</div>
-            <div class="growth-org">Shopaire.in · Paid social</div>
-          </div>
-        </div>
-        <div class="growth-stat-row">
-          <div class="growth-stat"><span class="n">Live</span><span class="l">Meta campaign in learning phase</span></div>
-        </div>
-        <span class="growth-period">2026 — Present · Meta Ads</span>
-        <p class="strategy">Creative-led Meta advertising — hook-first video routes, structured creative testing and captions matched to purchase intent. Results to be added once campaign data is available.</p>
+      <div class="testi-nav">
+        <button class="theme-toggle" type="button" data-testi-prev aria-label="Previous quote"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg></button>
+        <span class="testi-count" data-testi-count>1 / 1</span>
+        <button class="theme-toggle" type="button" data-testi-next aria-label="Next quote"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
       </div>
     </div>
+  </div>
+</section>
 
-    <div style="margin-top:24px">
-      <a class="view-more reveal" href="growth.html">
-        The full growth story
+<!-- 06 POV / STORY TEASER -->
+<section id="pov">
+  <div class="container">
+    <div class="eyebrow reveal" style="margin-bottom:22px">POINT OF VIEW</div>
+    <p class="pov reveal">The audience is the strategy. Everything else — the video, the copy, the ad — is execution.</p>
+    <div style="display:flex; gap:28px; flex-wrap:wrap">
+      <a class="view-more reveal" href="about.html">The story behind that
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+      <a class="view-more reveal" href="contact.html">Talk to me
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 05 VIDEO SHOWCASE (cinematic reel) -->
-<section id="films">
+<!-- 07 CTA CHOICE -->
+<section id="cta">
   <div class="container">
     <div class="s-head reveal">
       <div>
-        <div class="eyebrow" style="margin-bottom:14px">FILMS</div>
-        <h2>The reel.</h2>
+        <div class="eyebrow" style="margin-bottom:14px">NEXT STEP</div>
+        <h2>Want to work<br>together?</h2>
       </div>
-      <p class="lede">Short-form, explainer and campaign video — presented as a single strip of film. Scroll through; hover a frame to bring it forward.</p>
+      <p class="lede">Two ways to start — pick whichever suits how you hire.</p>
     </div>
-  </div>
-
-  <div class="cine-wrap">
-    <div class="cine-reel" id="cineReel" role="list" aria-label="Video showcase">
-
-      <a class="cine-frame" href="films.html" role="listitem">
-        <!-- Instagram Reel embed or video src -->
-        <span class="sheen"></span>
-        <span class="cine-platform">Instagram Reel</span>
-        <span class="cine-views">Views to be added</span>
-        <div class="cine-meta">
-          <div class="cine-client">Noah Donohoe explainer</div>
-          <div class="cine-sub">The Irish News · Script + edit</div>
-        </div>
+    <div class="cta-choice">
+      <a class="cta-card reveal" href="mailto:rohit.baljee@gmail.com?subject=Let%E2%80%99s%20work%20together">
+        <span class="cc-k">Email</span>
+        <h4>Tell me about the role or the brand →</h4>
       </a>
-
-      <a class="cine-frame" href="films.html" role="listitem">
-        <!-- Instagram Reel embed or video src -->
-        <span class="sheen"></span>
-        <span class="cine-platform">Instagram Reel</span>
-        <span class="cine-views">Views to be added</span>
-        <div class="cine-meta">
-          <div class="cine-client">Casement Park, explained</div>
-          <div class="cine-sub">The Irish News · Edit + captions</div>
-        </div>
-      </a>
-
-      <a class="cine-frame" href="films.html" role="listitem">
-        <!-- TikTok embed or video src -->
-        <span class="sheen"></span>
-        <span class="cine-platform">TikTok</span>
-        <span class="cine-views">Views to be added</span>
-        <div class="cine-meta">
-          <div class="cine-client">Kit-culture format</div>
-          <div class="cine-sub">Shirt in a Box · Creative direction</div>
-        </div>
-      </a>
-
-      <a class="cine-frame" href="films.html" role="listitem">
-        <!-- video src -->
-        <span class="sheen"></span>
-        <span class="cine-platform">YouTube</span>
-        <span class="cine-views">Views to be added</span>
-        <div class="cine-meta">
-          <div class="cine-client">Irish-language explainer</div>
-          <div class="cine-sub">The Irish News · Script + subtitles</div>
-        </div>
-      </a>
-
-      <a class="cine-frame" href="films.html" role="listitem">
-        <!-- video src -->
-        <span class="sheen"></span>
-        <span class="cine-platform">YouTube</span>
-        <span class="cine-views">Views to be added</span>
-        <div class="cine-meta">
-          <div class="cine-client">YourStory startup explainer</div>
-          <div class="cine-sub">YourStory Media · Script + edit</div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-
-  <div class="container" style="margin-top:8px">
-    <a class="view-more reveal" href="films.html">
-      All film work
-      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-    </a>
-  </div>
-</section>
-
-<!-- 06 PERFORMANCE METRICS -->
-<section id="metrics">
-  <div class="container">
-    <div class="s-head reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px">PERFORMANCE</div>
-        <h2>The numbers<br>behind the work.</h2>
-      </div>
-      <p class="lede">Real figures only — combined views and campaign metrics will be added as data becomes available.</p>
-    </div>
-
-    <div class="pm-type">
-      <div class="pm-cell reveal"><span class="n"><span class="accent"><span class="cs-count" data-target="74000" data-prefix="+">0</span></span></span><span class="l">Instagram followers grown in six months</span></div>
-      <div class="pm-cell reveal"><span class="n"><span class="cs-count" data-target="100000" data-suffix="+">0</span></span><span class="l">Views passed by every influencer campaign</span></div>
-      <div class="pm-cell reveal"><span class="n"><span class="cs-count" data-target="100" data-suffix="+">0</span></span><span class="l">Visual content pieces designed &amp; produced</span></div>
-      <div class="pm-cell reveal"><span class="n"><span class="accent"><span class="cs-count" data-target="14">0</span></span></span><span class="l">Part educational video series, end-to-end</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 07 EXPERIENCE (horizontal journey) -->
-<section id="experience">
-  <div class="container">
-    <div class="s-head reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px">JOURNEY</div>
-        <h2>One direction<br>of travel.</h2>
-      </div>
-      <p class="lede">Every role added a layer — journalism taught the story, video taught the craft, strategy taught the system, paid social taught the market. Hover a milestone to expand it.</p>
-    </div>
-
-    <div class="journey reveal">
-      <div class="glass-panel journey-step" data-cursor>
-        <span class="j-idx">01</span>
-        <h4>Journalism</h4>
-        <p class="j-detail">Deccan Chronicle and The Irish News — research, speed, headline instinct and editorial judgement. 30+ articles filed in a single month; national court and political stories covered daily.</p>
-      </div>
-      <div class="glass-panel journey-step" data-cursor>
-        <span class="j-idx">02</span>
-        <h4>Video Production</h4>
-        <p class="j-detail">Asha Kiran and YourStory — end-to-end production: scripting, filming, editing, animation and sound design. A 14-part educational series delivered solo.</p>
-      </div>
-      <div class="glass-panel journey-step" data-cursor>
-        <span class="j-idx">03</span>
-        <h4>Content Strategy</h4>
-        <p class="j-detail">Shirt in a Box and Da Box — repeatable formats, content calendars, brand voice and a team of seven editors. Instagram grown by 74,000 followers in six months.</p>
-      </div>
-      <div class="glass-panel journey-step" data-cursor>
-        <span class="j-idx">04</span>
-        <h4>Paid Social</h4>
-        <p class="j-detail">Meta ads training applied in live campaign work for Shopaire.in — campaign structure, creative testing, hooks and performance measurement.</p>
-      </div>
-      <div class="glass-panel journey-step" data-cursor>
-        <span class="j-idx">05</span>
-        <h4>Marketing</h4>
-        <p class="j-detail">Where it all lands: strategy-first content marketing — audience understanding, creative systems and distribution thinking, backed by production skills most marketers have to outsource.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:24px">
-      <a class="view-more reveal" href="work.html">
-        View full experience
-        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      <a class="cta-card reveal" href="https://linkedin.com/in/rohitbalaji" target="_blank" rel="noopener">
+        <span class="cc-k">LinkedIn</span>
+        <h4>See the career in context →</h4>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 08 CERTIFICATIONS -->
-<section id="certifications">
-  <div class="container">
-    <div class="s-head reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:14px">CERTIFICATIONS &amp; EDUCATION</div>
-        <h2>Trained, not<br>just self-taught.</h2>
-      </div>
-      <p class="lede">Formal training behind the practical work — marketing, media production and journalism.</p>
-    </div>
-
-    <div class="cert-list">
-      <div class="glass-panel cert-card lift reveal" data-cursor>
-        <span class="c-when">Meta · 2025</span>
-        <h4>Meta Ads Training</h4>
-        <p>Campaign structure, objectives, targeting, creative testing, budgets and performance measurement.</p>
-      </div>
-      <div class="glass-panel cert-card lift reveal" data-cursor>
-        <span class="c-when">2021 — 2022</span>
-        <h4>Queen's University Belfast</h4>
-        <p>MA, Media and Broadcast Production.</p>
-      </div>
-      <div class="glass-panel cert-card lift reveal" data-cursor>
-        <span class="c-when">2018 — 2021</span>
-        <h4>Christ University, Bangalore</h4>
-        <p>BA, Journalism.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 09 CONTACT -->
-<section id="about">
+<!-- 08 CONTACT -->
+<section id="contact-section">
   <div class="container">
     <div class="contact-ending" id="contact">
       <div class="eyebrow reveal" style="margin-bottom:18px">CONTACT</div>
@@ -406,26 +237,29 @@
           LinkedIn
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
         </a>
-        <a class="ce-link" href="assets/rohit-balaji-cv.pdf" download>
-          Download CV
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m5 12 7 7 7-7"></path></svg>
-        </a>
       </div>
     </div>
 
-    <footer class="foot">
-      <div>© 2026 Rohit Balaji · Belfast</div>
-      <nav class="foot-links" aria-label="Footer navigation">
-        <a href="work.html">Work</a>
-        <a href="growth.html">Growth</a>
-        <a href="films.html">Films</a>
-        <a href="marketing.html">Marketing</a>
-        <a href="skills.html">Skills</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="photo-credit">Photograph: A rower on the Lagan</div>
-    </footer>
+    <!-- 09 FOOTER -->
+    <div style="margin-top: clamp(64px, 10vw, 120px)">
+      <div class="foot-wordmark" id="footWordmark" aria-hidden="true">ROHIT BALAJI</div>
+      <footer class="foot">
+        <div>© 2026 Rohit Balaji · Belfast</div>
+        <nav class="foot-links" aria-label="Footer navigation">
+          <a href="work.html">Work</a>
+          <a href="growth.html">Growth</a>
+          <a href="films.html">Films</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="skills.html">Skills</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="foot-links" aria-label="Social links">
+          <a href="https://linkedin.com/in/rohitbalaji" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:rohit.baljee@gmail.com">Email</a>
+        </nav>
+      </footer>
+    </div>
   </div>
 </section>
 
@@ -433,7 +267,7 @@
 </div>
 
 <script>
-/* ---- Theme toggle ---- */
+/* ---- Theme toggle (light is default) ---- */
 function toggleTheme(){
   var cur = document.documentElement.getAttribute('data-theme');
   var next = cur === 'dark' ? 'light' : 'dark';
@@ -442,6 +276,37 @@ function toggleTheme(){
 }
 
 var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---- Wordmark: split into letters, staggered assembly ---- */
+function splitWordmark(el, baseDelay){
+  var text = el.textContent;
+  el.textContent = '';
+  Array.from(text).forEach(function(ch, i){
+    if(ch === ' '){
+      var sp = document.createElement('span');
+      sp.className = 'wm-space';
+      el.appendChild(sp);
+      return;
+    }
+    var s = document.createElement('span');
+    s.className = 'wm-letter';
+    s.textContent = ch;
+    s.style.animationDelay = (baseDelay + i * 45) + 'ms';
+    s.style.transitionDelay = (i * 35) + 'ms';
+    el.appendChild(s);
+  });
+}
+var heroWm = document.getElementById('heroWordmark');
+if(heroWm) splitWordmark(heroWm, 120);
+var footWm = document.getElementById('footWordmark');
+if(footWm){
+  splitWordmark(footWm, 0);
+  new IntersectionObserver(function(entries, obs){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ footWm.classList.add('in'); obs.unobserve(footWm); }
+    });
+  }, { threshold: 0.3 }).observe(footWm);
+}
 
 /* ---- Scroll reveal ---- */
 var io = new IntersectionObserver(function(entries){
@@ -453,37 +318,17 @@ var io = new IntersectionObserver(function(entries){
     }
   });
 }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-
 document.querySelectorAll('.reveal').forEach(function(el){
   var parent = el.parentElement;
   if(parent){
     var siblings = Array.from(parent.querySelectorAll(':scope > .reveal'));
     var idx = siblings.indexOf(el);
-    if(idx >= 0) el.dataset.stagger = String(idx * 65);
+    if(idx >= 0) el.dataset.stagger = String(idx * 80);
   }
   io.observe(el);
 });
 
-/* ---- Cursor light ---- */
-var supportsHover = window.matchMedia('(hover: hover)').matches;
-if(supportsHover){
-  document.querySelectorAll('[data-cursor]').forEach(function(el){
-    var light = document.createElement('div');
-    light.className = 'cursor-light';
-    el.insertBefore(light, el.firstChild);
-    el.addEventListener('pointermove', function(e){
-      var r = el.getBoundingClientRect();
-      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-    el.addEventListener('pointerleave', function(){
-      el.style.setProperty('--mx', '-200px');
-      el.style.setProperty('--my', '-200px');
-    });
-  });
-}
-
-/* ---- Count-up metrics ---- */
+/* ---- Count-up metrics (once, on reveal) ---- */
 var cio = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(!e.isIntersecting) return;
@@ -504,98 +349,80 @@ var cio = new IntersectionObserver(function(entries){
 }, { threshold: 0.4 });
 document.querySelectorAll('.cs-count').forEach(function(el){ cio.observe(el); });
 
-/* ---- Growth cards: grayscale -> colour ---- */
-var gio = new IntersectionObserver(function(entries){
+/* ---- Case-block reels: data-driven, lazy, in-view autoplay ----
+   Add entries per project; a row with no entries collapses.
+   Schema: { videoSrc, poster, platform, likes, date, views, caption } */
+var reelData = {
+  shirtinabox: [
+    /* { videoSrc: 'assets/reels/sib-01.mp4', poster: 'assets/reels/sib-01.jpg',
+         platform: 'Instagram', likes: '—', date: '—', views: '—', caption: '' } */
+  ],
+  irishnews: [],
+  shopaire: []
+};
+document.querySelectorAll('.reel-row').forEach(function(row){
+  var entries = reelData[row.dataset.reels] || [];
+  if(!entries.length){ row.remove(); return; }
+  entries.forEach(function(d){
+    var card = document.createElement('div');
+    card.className = 'reel-card';
+    var stats = [d.likes, d.views, d.date].filter(Boolean).join(' · ');
+    card.innerHTML =
+      '<video muted loop playsinline preload="none"' + (d.poster ? ' poster="' + d.poster + '"' : '') + ' data-src="' + d.videoSrc + '"></video>' +
+      '<div class="rc-top"><span class="rc-platform">' + d.platform + '</span><span class="rc-avatar">' + (d.avatar ? '<img src="' + d.avatar + '" alt="">' : 'RB') + '</span></div>' +
+      '<div class="rc-meta">' + (stats ? '<div class="rc-stats">' + stats + '</div>' : '') + (d.caption ? '<span class="rc-caption">' + d.caption + '</span>' : '') + '</div>';
+    row.appendChild(card);
+  });
+});
+var vio = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
+    var v = e.target;
     if(e.isIntersecting){
-      setTimeout(function(){ e.target.classList.add('in-colour'); }, 250);
-      gio.unobserve(e.target);
+      if(!v.src && v.dataset.src) v.src = v.dataset.src;
+      if(!reduceMotion) v.play().catch(function(){});
+    } else {
+      v.pause();
     }
   });
-}, { threshold: 0.3 });
-document.querySelectorAll('.growth-card').forEach(function(el){ gio.observe(el); });
+}, { threshold: 0.35 });
+document.querySelectorAll('.reel-card video').forEach(function(v){ vio.observe(v); });
 
-/* ---- Cinematic reel: advance on enter + cursor tilt ---- */
-var reel = document.getElementById('cineReel');
-if(reel && !reduceMotion){
-  var advanced = false;
-  var rio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting && !advanced){
-        advanced = true;
-        reel.scrollTo({ left: 90, behavior: 'smooth' });
-        rio.unobserve(reel);
-      }
-    });
-  }, { threshold: 0.35 });
-  rio.observe(reel);
-}
-if(supportsHover){
-  document.querySelectorAll('.cine-frame').forEach(function(frame){
-    frame.addEventListener('pointermove', function(e){
-      if(reduceMotion) return;
-      var r = frame.getBoundingClientRect();
-      var rx = ((e.clientY - r.top) / r.height - 0.5) * -3.5;
-      var ry = ((e.clientX - r.left) / r.width - 0.5) * 4.5;
-      frame.style.transform = 'scale(1.035) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
-    });
-    frame.addEventListener('pointerleave', function(){
-      frame.style.transform = '';
-    });
-    var video = frame.querySelector('video');
-    if(video){
-      frame.addEventListener('mouseenter', function(){ video.muted = true; video.play().catch(function(){}); });
-      frame.addEventListener('mouseleave', function(){ video.pause(); video.currentTime = 0; });
-    }
-  });
-}
+/* ---- Testimonial carousel (activate by filling testiData + removing `hidden`) ---- */
+var testiData = [
+  /* { quote: '...', name: '...', title: '...', avatar: 'assets/...' } */
+];
+(function(){
+  var root = document.querySelector('[data-testi]');
+  if(!root || !testiData.length) return;
+  var i = 0;
+  function render(){
+    var d = testiData[i];
+    root.querySelector('[data-testi-quote]').textContent = '“' + d.quote + '”';
+    root.querySelector('[data-testi-name]').textContent = d.name;
+    root.querySelector('[data-testi-title]').textContent = d.title;
+    var av = root.querySelector('[data-testi-avatar]');
+    av.innerHTML = d.avatar ? '<img src="' + d.avatar + '" alt="" style="width:100%;height:100%;object-fit:cover">' : '';
+    root.querySelector('[data-testi-count]').textContent = (i + 1) + ' / ' + testiData.length;
+  }
+  root.querySelector('[data-testi-prev]').addEventListener('click', function(){ i = (i - 1 + testiData.length) % testiData.length; render(); });
+  root.querySelector('[data-testi-next]').addEventListener('click', function(){ i = (i + 1) % testiData.length; render(); });
+  render();
+})();
 
-/* ---- Selected work: silent hover preview ---- */
-if(supportsHover){
-  document.querySelectorAll('.sw-row').forEach(function(row){
-    var video = row.querySelector('.sw-thumb video');
-    if(!video) return;
-    row.addEventListener('mouseenter', function(){ video.muted = true; video.play().catch(function(){}); });
-    row.addEventListener('mouseleave', function(){ video.pause(); video.currentTime = 0; });
-  });
-}
-
-/* ---- Hero scroll motion: portrait scales, glass shifts, heading eases ---- */
-var heroImage = document.getElementById('heroImage');
-var heroPanel = document.getElementById('heroPanel');
-var heroName  = document.getElementById('heroName');
-if(heroImage && !reduceMotion){
-  var ticking = false;
-  function heroScroll(){
-    var y = window.scrollY;
-    var limit = window.innerHeight;
-    if(y < limit){
-      var p = y / limit;
-      heroImage.style.transform = 'scale(' + (1 + p * 0.05) + ')';
-      heroPanel.style.transform = 'translateY(' + (p * 22) + 'px)';
-      heroName.style.transform  = 'translateY(' + (p * 34) + 'px)';
-    }
-    ticking = false;
+/* ---- Nav shrink on scroll ---- */
+(function(){
+  var nav = document.querySelector('.nav');
+  if(!nav) return;
+  var t = false;
+  function onScroll(){
+    nav.classList.toggle('shrunk', window.scrollY > 40);
+    t = false;
   }
   window.addEventListener('scroll', function(){
-    if(!ticking){ requestAnimationFrame(heroScroll); ticking = true; }
+    if(!t){ requestAnimationFrame(onScroll); t = true; }
   }, { passive: true });
-}
-</script>
-
-<script>
-(function(){
-  var nav=document.querySelector(".nav");
-  if(!nav)return;
-  var t=false;
-  function onScroll(){
-    nav.classList.toggle("shrunk",window.scrollY>40);
-    t=false;
-  }
-  window.addEventListener("scroll",function(){
-    if(!t){requestAnimationFrame(onScroll);t=true;}
-  },{passive:true});
 })();
 </script>
+
 </body>
 </html>
